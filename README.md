@@ -24,4 +24,4 @@ TBC
 
 Made Tech 2018 &copy;
 
-[link_supportability]: /supportability.md
+[link_supportability]: /SUPPORTABILITY.md

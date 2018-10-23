@@ -7,7 +7,7 @@ We evaluate the projects in the following areas:
 - Testability
 - Availability of different environments
 - Database durability
-- Continuous Pipeline
+- Continuous Delivery Pipeline
 - Logging
 - Infrastructure monitoring
 - Dependency upgrade and Vulnerability alerts

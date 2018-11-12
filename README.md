@@ -18,7 +18,7 @@ The full checklist can be seen here: [`SUPPORTABILITY.md`][link_supportability].
 
 ## License
 
-TBC
+Attribution-ShareAlike 4.0 International: The licensor permits others to copy, distribute, display, and perform the work. In return, licensees must give the original author credit. See [`LICENSE.txt'](LICENSE.txt).
 
 ## Copyright
 

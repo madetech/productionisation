@@ -13,7 +13,6 @@
     * [9. Vulnerability alerts](#9-vulnerability-alerts)
     * [10. Dependency upgrade alerts](#10-dependency-upgrade-alerts)
   * [Platform specific](#platform-specific)
-  * [Recommended services](#recommended-services)
 
 ## Project readiness checklist
 
@@ -25,20 +24,20 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 
 ### 1. General requirements
 
-* [ ] 1.1 Application source code hosted with a Git VCS service
+* [ ] 1.1 Host application source code with Github, as a number of our services depend on this. A mirror should be used where this is not possible
 * 1.2 No linting violations
   * [ ] 1.2.1 No style related linting violations and no overrides permitted
   * [ ] 1.2.2 No complexity related linting violations. Overrides permitted but must be commented inline with the code it is overriding
 * [ ] 1.3 `.editorconfig` as per [RFC 011][rfc_011]
 * [ ] 1.4 `Makefile` as per [RFC 012][rfc_012]
 * [ ] 1.5 `README.md` as per [RFC 013][rfc_013]
-* [ ] 1.6 `README.md` to also include references for all 3rd party service integrations
+* [ ] 1.6 `README.md` to also include references for all 3rd party services integration (including the standard Papertrail, Sentry, Github, Datadog or Dependabot services)
 * 1.7 Local development seeds from production:
   * [ ] 1.7.1 Seed a specific item (for example a product, in an ecom system)
   * [ ] 1.7.2 Seed a specified number of items in batch
   * [ ] 1.7.3 Seed full catalogue of items
 * [ ] 1.8 Local development seed fixtures (for example, using ffaker for Ruby/Rails)
-* [ ] 1.9 Install an application profiler for the `development` environment so that metrics such as page render times, database query times can be used to make performance improvements
+* [ ] 1.9 Install an application profiler for the `development` environment (for example, Rack profiler `rack-mini-profiler`) so that metrics such as page render times, database query times can be used to make performance improvements
 
 ### 2. Testing
 
@@ -56,14 +55,14 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 ### 4. Database
 
 * 4.1 Production database has:
-  * [ ] 4.1.1 Automatic failover
+  * [ ] 4.1.1 Automatic failover (for example, Multi-AZ on AWS RDS)
   * [ ] 4.1.2 Daily automatic backups
   * [ ] 4.1.3 If feasible with provider, enable transaction log backups for PIT (Point in Time) restore ability
 
 ### 5. Pipeline
 
-* 5.1 Continuous Delivery pipeline configured to:
-  * [ ] 5.1.1 Automatically test pull requests
+* 5.1 CircleCI configured to:
+  * [ ] 5.1.1 Automatically test Github PRs
   * [ ] 5.1.2 `master` branch to run linting and tests
   * [ ] 5.1.3 Automatic deploy to `staging` environment
   * [ ] 5.1.4 Manual step to deploy to `production` environment
@@ -72,7 +71,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 
 ### 6. Application logging
 
-* 6.1 Remote logging service installed and configured as remote application logger for:
+* 6.1 Papertrail installed and configured as remote application logger for:
   * [ ] 6.1.1 Main application
   * [ ] 6.1.2 Background workers
 * 6.2 Appropriate log level configured:
@@ -92,20 +91,20 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 
 ### 7. Exception tracking
 
-* [ ] 7.1 Remote exception tracking service installed and configured for exception capture for all non-development environments
-* [ ] 7.2 Alerts sent to relevant instant chat channel
+* [ ] 7.1 Sentry installed and configured for exception capture for all non-development environments
+* [ ] 7.2 Alerts sent to relevant Slack channel
 * [ ] 7.3 Alerts sent to relevant team email address
 * [ ] 7.4 UUID of request is sent as additional user data
 
 ### 8. Infrastructure monitoring
 
-To be applied if infrastructure has been orchestrated and provisioned specifically for the project. Hosted PaaS solutions don't require infrastructure related monitoring at present.
+To be applied if infrastructure has been orchestrated and provisioned specifically for the project. Hosted solutions such as Heroku don't require infrastructure related monitoring at present.
 
-* [ ] 8.1 Sub-organisation created under parent organisation for each customer
-* [ ] 8.2 Monitoring agent be installed on all production infrastructure
-* [ ] 8.3 Monitoring agent could be installed on non-production infrastructure if necessary
-* [ ] 8.4 Monitoring agent hostname configured according to proposed [RFC 008 - Server naming convention][rfc_008]
-* 8.5 Monitors configured in infrastructure monitoring service for (warn/alert):
+* [ ] 8.1 Datadog (DD) sub-organisation created under Made Tech parent organisation
+* [ ] 8.2 DD agent be installed on all production infrastructure
+* [ ] 8.3 DD agent could be installed on non-production infrastructure if necessary
+* [ ] 8.4 DD agent hostname configured according to proposed [RFC 008 - Server naming convention][rfc_008]
+* 8.5 Monitors configured in DD for (warn/alert):
   * [ ] 8.5.1 Inode usage (80% / 90%)
   * [ ] 8.5.2 CPU load (75% / 85% average over 2 minutes)
   * [ ] 8.5.3 Disk usage (80% / 90%)
@@ -118,26 +117,16 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 
 ### 9. Vulnerability alerts
 
-* [ ] 9.1 Configure either VCS hosting service or Continuous Delivery pipeline to detect and alert on vulnerable dependencies
-* [ ] 9.2 Configure notifications to send alerts
+* [ ] 9.1 Configure Github to detect and alert on vulnerable dependencies (repository Settings > Data services > Vulnerability alerts)
+* [ ] 9.2 Configure notifications to send alerts **TODO (can we target the Live Services team on Github)**
 
 ### 10. Dependency upgrade alerts
 
-* 10.1 [ ] Configure a dependency upgrade notification service to submit pull requests to VCS service repository with alerts
+* 10.1 [ ] Configure Dependabot to submit PRs to Github repository with alerts TODO
 
 ## Platform specific
 
 * [Ruby][ruby_reference]
-
-## Recommended services
-
-* VCS hosting - Github
-* Remote logging - Papertrail
-* Exception tracking - Sentry
-* Infrastructure monitoring - Datadog
-* Security vulnerability scanning - Github
-* Dependency upgrade notifications - Dependabot
-* PaaS - Heroku
 
 [rfc_008]: https://github.com/madetech/rfcs/pull/9 "Proposed RFC 008 - Server naming convention"
 [rfc_011]: https://github.com/madetech/rfcs/blob/master/rfc-011-editorconfig.md "RFC 011 - Editorconfig"

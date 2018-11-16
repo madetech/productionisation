@@ -1,6 +1,6 @@
-# Productionisation Checklist
+# Maintainability Checklist
 
-* [Productionisation Checklist](#supportability-checklist)
+* [Maintainability Checklist](#maintainability-checklist)
   * [Project readiness checklist](#project-readiness-checklist)
     * [1. General requirements](#1-general-requirements)
     * [2. Testing](#2-testing)

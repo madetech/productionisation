@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="stylesheet" href="assets/css/madetech-frontend.min.css">
+</head>
+
+<body>
+  <div class="top_bar">
+    <div class="top_bar__inner">
+      <div class="container">
+        <div class="d-flex justify-content-between">
+          <div>
+            Improving software delivery in every organisation
+          </div>
+
+          <nav>
+            <a href="https://www.madetech.com">Who are Made Tech?</a>
+            <span class="space"></span>
+            <a href="https://www.madetech.com/blog">Blog</a>
+            <span class="space"></span>
+            <a href="https://learn.madetech.com">Learn</a>
+            <span class="space"></span>
+            <a href="https://www.madetech.com/careers">Careers</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="header__inner">
+      <div class="navbar navbar-expand-lg p-0">
+        <div class="navbar-brand mr-auto">
+          <a href="/" class="header__logo_link">
+            <span class="header_logo_type">
+              <span class="header_logo_type__text">Productionisation</span>
+              <span class="px-3">by</span>
+              <img
+                alt="Made Tech"
+                itemProp="logo"
+                src="assets/images/made-tech-logo-colour.png"
+                width="120px"
+                />
+            </span>
+          </a>
+        </div>
+
+        <button
+          class="header__toggler d-lg-none"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          >
+          <span class="header__toggler_icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <div class="ml-auto">
+            <div class="header_nav">
+              <nav class="navbar-nav align-items-center">
+                <a href="{{ site.github.repository_url }}" class="nav-link mx-1">
+                  GitHub
+                </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mt-5">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        {{ content }}
+      </div>
+    </div>
+  </main>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
+  <script src="assets/js/madetech-frontend.js"></script>
+</body>
+</html>

@@ -97,6 +97,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 * [ ] 7.2 Alerts sent to relevant instant chat channel
 * [ ] 7.3 Alerts sent to relevant team email address
 * [ ] 7.4 UUID of request is sent as additional user data
+* [ ] 7.5 No reported unhandled exceptions in the past week
 
 ### 8. Infrastructure monitoring
 

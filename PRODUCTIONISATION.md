@@ -97,7 +97,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 * [ ] 7.2 Alerts sent to relevant instant chat channel
 * [ ] 7.3 Alerts sent to relevant team email address
 * [ ] 7.4 UUID of request is sent as additional user data
-* [ ] 7.5 No unresolved exceptions in the past week
+* [ ] 7.5 No unresolved exceptions in the past week  
   _Exceptions that have been thrown but not caught or handled safely could lead to larger problems for applications and teams. It's good for teams to have the discipline of regularly checking, or acting upon reported exceptions as they occur during development to prevent these from accruing. If code changes have been made to handle these, the exceptions should be marked as resolved in the tracking service. No reported exceptions in the past week is a positive sign of well managed exceptions._
 
 ### 8. Infrastructure monitoring

@@ -23,7 +23,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 * [RFC 012 - Makefile standards][rfc_012]
 * [RFC 013 - Code repository standards][rfc_013]
 
-### 1. General requirements
+### 1. [General requirements](context-and-compliance/01-general.md)
 
 * [ ] 1.1 Application source code hosted with a Git VCS service
 * 1.2 No linting violations
@@ -91,14 +91,13 @@ Ensuring that your project adheres to the following RFCs is a good first step as
   * [ ] 6.4.3 HTTP parameters
 * [ ] 6.5 Ensure sensitive parameters are filtered from logs
 
-### 7. Exception tracking
+### 7. [Exception tracking](context-and-compliance/07-exception-tracking.md)
 
 * [ ] 7.1 Remote exception tracking service installed and configured for exception capture for all non-development environments
 * [ ] 7.2 Alerts sent to relevant instant chat channel
 * [ ] 7.3 Alerts sent to relevant team email address
 * [ ] 7.4 UUID of request is sent as additional user data
-* [ ] 7.5 Reported exceptions are resolved within a week  
-  _Exceptions that have been thrown but not caught or handled safely could lead to larger problems for applications and teams. It's good for teams to have the discipline of regularly checking, or acting upon reported exceptions as they occur during development to prevent these from accruing. If code changes have been made to handle these, the exceptions should be marked as resolved in the tracking service. No reported exceptions in the past week is a positive sign of well managed exceptions._
+* [ ] 7.5 Reported exceptions are resolved within a week
 
 ### 8. Infrastructure monitoring
 

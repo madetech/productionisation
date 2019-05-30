@@ -37,7 +37,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
   * [ ] 1.7.1 Seed a specific item (for example a product, in an ecom system)
   * [ ] 1.7.2 Seed a specified number of items in batch
   * [ ] 1.7.3 Seed full catalogue of items
-* [ ] 1.8 Local development seed fixtures (for example, using ffaker for Ruby/Rails)
+* [ ] 1.8 Local development seed fixtures (for example, using faker for Ruby/Rails)
 * [ ] 1.9 Install an application profiler for the `development` environment so that metrics such as page render times, database query times can be used to make performance improvements
 
 ### 2. Testing
@@ -126,7 +126,7 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 
 ### 10. Dependency upgrade alerts
 
-* 10.1 [ ] Configure a dependency upgrade notification service to submit pull requests to VCS service repository with alerts
+* [ ] 10.1 Configure a dependency upgrade notification service to submit pull requests to VCS service repository with alerts
 
 ## Platform specific
 

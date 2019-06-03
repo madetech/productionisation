@@ -19,6 +19,7 @@
 
 Ensuring that your project adheres to the following RFCs is a good first step as these will be referenced further below:
 
+* [RFC 008 - Server naming convention][rfc_008]
 * [RFC 011 - Editorconfig][rfc_011]
 * [RFC 012 - Makefile standards][rfc_012]
 * [RFC 013 - Code repository standards][rfc_013]
@@ -31,12 +32,12 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 * [ ] 1.4 `README.md` as per [RFC 013][rfc_013]
 * [ ] 1.5 `README.md` to also include references for all 3rd party service integrations
 * 1.6 Local development seeds from production (or production-like data depending on project):
-  * [ ] 1.6.1 Seed a specific item (for example a product, in an ecom system)
+  * [ ] 1.6.1 Seed a specific item (for example, a product in an ecom system)
   * [ ] 1.6.2 Seed a specified number of items in batch
   * [ ] 1.6.3 Seed full catalogue of items
-* [ ] 1.7 Local development seed fixtures (for example, using faker for Ruby/Rails)
+* [ ] 1.7 Local development seed fixtures (for example, using Faker or AutoFixture)
 * [ ] 1.8 Install an application profiler for the `development` environment so that metrics such as page render times, database query times can be used to make performance improvements
-* [ ] 1.9 Insfrastructure to implement auto-scaling for production where possible, otherwise refer to the [Infrastructure monitoring](#8-infrastructure-monitoring) section
+* [ ] 1.9 Infrastructure to implement auto-scaling for production where possible, otherwise refer to the [Infrastructure monitoring](#8-infrastructure-monitoring) section
 * [ ] 1.10 Decision making process documented using [Architecture Decision Records (ADRs)](adr_reference)
 
 ### 2. Testing
@@ -117,7 +118,7 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
   * [ ] 8.6.1 Slack channel
   * [ ] 8.6.2 Team email address
 * 8.7 Monitoring agent configured to monitor
-  * [ ] 8.7.1 App performance 
+  * [ ] 8.7.1 App performance
   * [ ] 8.7.2 Request time
 
 ### 9. Vulnerability alerts

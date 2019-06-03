@@ -120,7 +120,7 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
   * [ ] 8.6.2 Team email address
 * 8.7 Monitoring agent confirgured to monitor
   * [ ] 8.7.1 App performance 
-  * [ ] 8.7.2 Request time (Ideal response time ~200ms)
+  * [ ] 8.7.2 Request time
 
 ### 9. Vulnerability alerts
 

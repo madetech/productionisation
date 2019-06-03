@@ -39,7 +39,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
   * [ ] 1.7.3 Seed full catalogue of items
 * [ ] 1.8 Local development seed fixtures (for example, using ffaker for Ruby/Rails)
 * [ ] 1.9 Install an application profiler for the `development` environment so that metrics such as page render times, database query times can be used to make performance improvements
-* [ ] 1.10 Decision making process documented using Architecture Decision Records (ADRs)
+* [ ] 1.10 Decision making process documented using [Architecture Decision Records (ADRs)](adr_reference)
 
 ### 2. Testing
 
@@ -148,3 +148,4 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 [rfc_012]: https://github.com/madetech/rfcs/blob/master/rfc-012-makefile-standards.md "RFC 012 - Makefile standards"
 [rfc_013]: https://github.com/madetech/rfcs/blob/master/rfc-013-code-repositories.md "RFC 013 - Code repository standards"
 [ruby_reference]: reference/ruby.md
+[adr_reference]: https://github.com/madetech/architecture-decision-log

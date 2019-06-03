@@ -34,8 +34,9 @@ Ensuring that your project adheres to the following RFCs is a good first step as
   * [ ] 1.6.1 Seed a specific item (for example a product, in an ecom system)
   * [ ] 1.6.2 Seed a specified number of items in batch
   * [ ] 1.6.3 Seed full catalogue of items
-* [ ] 1.7 Local development seed fixtures (for example, using ffaker for Ruby/Rails)
+* [ ] 1.7 Local development seed fixtures (for example, using faker for Ruby/Rails)
 * [ ] 1.8 Install an application profiler for the `development` environment so that metrics such as page render times, database query times can be used to make performance improvements
+* [ ] 1.9 Insfrastructure to implement auto-scaling for production where possible, otherwise refer to the [Infrastructure monitoring](#8-infrastructure-monitoring) section
 
 ### 2. Testing
 
@@ -108,7 +109,7 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
   * [ ] 8.5.1 Inode usage (80% / 90%)
   * [ ] 8.5.2 CPU load (75% / 85% average over 2 minutes)
   * [ ] 8.5.3 Disk usage (80% / 90%)
-  * [ ] 8.5.4 Memory usage (80% / 90% average over 2 minutes)
+  * [ ] 8.5.4 Memory usage (60% / 70% average over 2 minutes)
   * [ ] 8.5.5 Host stopped reporting
   * [ ] 8.5.6 NTP sync
 * 8.6 Monitors configured to alert via:
@@ -128,7 +129,7 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 
 * [Ruby][ruby_reference]
 
-## Recommended services
+## Suggested services
 
 * VCS hosting - Github
 * Remote logging - Papertrail

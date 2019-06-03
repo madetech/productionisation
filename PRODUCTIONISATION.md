@@ -116,6 +116,9 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 * 8.6 Monitors configured to alert via:
   * [ ] 8.6.1 Slack channel
   * [ ] 8.6.2 Team email address
+* 8.7 Monitoring agent configured to monitor
+  * [ ] 8.7.1 App performance 
+  * [ ] 8.7.2 Request time
 
 ### 9. Vulnerability alerts
 

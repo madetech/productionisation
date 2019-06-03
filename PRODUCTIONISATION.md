@@ -112,7 +112,7 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
   * [ ] 8.5.1 Inode usage (80% / 90%)
   * [ ] 8.5.2 CPU load (75% / 85% average over 2 minutes)
   * [ ] 8.5.3 Disk usage (80% / 90%)
-  * [ ] 8.5.4 Memory usage (80% / 90% average over 2 minutes)
+  * [ ] 8.5.4 Memory usage (60% / 70% average over 2 minutes)
   * [ ] 8.5.5 Host stopped reporting
   * [ ] 8.5.6 NTP sync
 * 8.6 Monitors configured to alert via:
@@ -132,7 +132,7 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 
 * [Ruby][ruby_reference]
 
-## Recommended services
+## Suggested services
 
 * VCS hosting - Github
 * Remote logging - Papertrail

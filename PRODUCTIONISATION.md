@@ -132,7 +132,7 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 
 * [Ruby][ruby_reference]
 
-## Recommended services
+## Suggested services
 
 * VCS hosting - Github
 * Remote logging - Papertrail

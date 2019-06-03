@@ -117,18 +117,21 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 * 8.6 Monitors configured to alert via:
   * [ ] 8.6.1 Slack channel
   * [ ] 8.6.2 Team email address
-* 8.7 APM service configured to monitor
-  * [ ] 8.7.1 App performance
-  * [ ] 8.7.2 Request time
 
-### 9. Vulnerability alerts
+### 9. Application performance management
 
-* [ ] 9.1 Configure either VCS hosting service or Continuous Delivery pipeline to detect and alert on vulnerable dependencies
-* [ ] 9.2 Configure notifications to send alerts
+* 9.1 APM service configured to monitor
+  * [ ] 9.1.1 App performance
+  * [ ] 9.1.2 Request time
 
-### 10. Dependency upgrade alerts
+### 10. Vulnerability alerts
 
-* [ ] 10.1 Configure a dependency upgrade notification service to submit pull requests to VCS service repository with alerts
+* [ ] 10.1 Configure either VCS hosting service or Continuous Delivery pipeline to detect and alert on vulnerable dependencies
+* [ ] 10.2 Configure notifications to send alerts
+
+### 11. Dependency upgrade alerts
+
+* [ ] 11.1 Configure a dependency upgrade notification service to submit pull requests to VCS service repository with alerts
 
 ## Platform specific
 

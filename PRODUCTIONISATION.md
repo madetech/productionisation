@@ -33,7 +33,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 * [ ] 1.4 `Makefile` as per [RFC 012][rfc_012]
 * [ ] 1.5 `README.md` as per [RFC 013][rfc_013]
 * [ ] 1.6 `README.md` to also include references for all 3rd party service integrations
-* 1.7 Local development seeds from production:
+* 1.7 Local development seeds from production (or production-like data depending on project):
   * [ ] 1.7.1 Seed a specific item (for example a product, in an ecom system)
   * [ ] 1.7.2 Seed a specified number of items in batch
   * [ ] 1.7.3 Seed full catalogue of items

@@ -104,7 +104,7 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 * [ ] 8.1 Sub-organisation created under parent organisation for each customer
 * [ ] 8.2 Monitoring agent be installed on all production infrastructure
 * [ ] 8.3 Monitoring agent could be installed on non-production infrastructure if necessary
-* [ ] 8.4 Monitoring agent hostname configured according to proposed [RFC 008 - Server naming convention][rfc_008]
+* [ ] 8.4 Monitoring agent hostname configured according to proposed [RFC 008 - Server naming convention][rfc_008] (_this doesn't apply to serverless_)
 * 8.5 Monitors configured in infrastructure monitoring service for (warn/alert):
   * [ ] 8.5.1 Inode usage (80% / 90%)
   * [ ] 8.5.2 CPU load (75% / 85% average over 2 minutes)
@@ -123,7 +123,7 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 
 ### 10. Dependency upgrade alerts
 
-* 10.1 [ ] Configure a dependency upgrade notification service to submit pull requests to VCS service repository with alerts
+* [ ] 10.1 Configure a dependency upgrade notification service to submit pull requests to VCS service repository with alerts
 
 ## Platform specific
 

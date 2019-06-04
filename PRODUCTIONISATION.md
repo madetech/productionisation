@@ -70,7 +70,9 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 
 * 5.1 Continuous Delivery pipeline configured to:
   * [ ] 5.1.1 Automatically test pull requests
-  * [ ] 5.1.2 `master` branch to run lint (_if applicable_) and tests
+  * [ ] 5.1.2 `master` branch to run code checks
+    * [ ] 5.1.2.1 Code Standard checks (linting)
+    * [ ] 5.1.2.2 Tests
   * [ ] 5.1.3 Automatic deploy to `staging` environment
   * [ ] 5.1.4 Manual step to deploy to `production` environment
   * [ ] 5.1.5 Zero downtime (e.g. blue/green environment) deployment step to __all__ environments

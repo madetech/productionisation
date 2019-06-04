@@ -75,7 +75,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
     * [ ] 5.1.2.2 Tests
   * [ ] 5.1.3 Automatic deploy to `staging` environment
   * [ ] 5.1.4 Manual step to deploy to `production` environment
-  * [ ] 5.1.5 Zero downtime (e.g. blue/green environment) deployment step to __all__ environments
+  * [ ] 5.1.5 Zero downtime (e.g. blue/green environment) deployment step to **all** environments
 * [ ] 5.2 All pipeline steps are defined in code within repository for chosen pipeline service
 
 ### 6. Application logging

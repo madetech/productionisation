@@ -27,7 +27,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 ### 1. General requirements
 
 * [ ] 1.1 Application source code hosted with a Git VCS service
-* 1.2 Adhere to project coding standards and code style guideline
+* 1.2 Adhere to project coding standards
   * [ ] 1.2.1 Provides a style guideline
   * [ ] 1.2.2 Consistency within development team
   * [ ] 1.2.3 If applicable, no linting violations (style and complexity related)

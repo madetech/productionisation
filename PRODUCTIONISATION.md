@@ -159,4 +159,4 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 [rfc_012]: https://github.com/madetech/rfcs/blob/master/rfc-012-makefile-standards.md "RFC 012 - Makefile standards"
 [rfc_013]: https://github.com/madetech/rfcs/blob/master/rfc-013-code-repositories.md "RFC 013 - Code repository standards"
 [ruby_reference]: reference/ruby.md
-[adr_reference]: https://github.com/madetech/architecture-decision-log
+[adr_reference]: https://web.archive.org/web/20190430063238/http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions

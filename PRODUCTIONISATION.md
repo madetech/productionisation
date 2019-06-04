@@ -30,7 +30,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 * 1.2 Adhere to project coding standards
   * [ ] 1.2.1 Provides a style guideline
   * [ ] 1.2.2 Consistency within development team
-  * [ ] 1.2.3 If applicable, no linting violations (style and complexity related)
+  * [ ] 1.2.3 Enforce coding standards (e.g. automated linter on code changes)
 * [ ] 1.3 `.editorconfig` as per [RFC 011][rfc_011]
 * [ ] 1.4 `Makefile` as per [RFC 012][rfc_012]
 * [ ] 1.5 `README.md` as per [RFC 013][rfc_013]

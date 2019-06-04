@@ -27,18 +27,22 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 ### 1. General requirements
 
 * [ ] 1.1 Application source code hosted with a Git VCS service
-* [ ] 1.2 `.editorconfig` as per [RFC 011][rfc_011]
-* [ ] 1.3 `Makefile` as per [RFC 012][rfc_012]
-* [ ] 1.4 `README.md` as per [RFC 013][rfc_013]
-* [ ] 1.5 `README.md` to also include references for all 3rd party service integrations
-* 1.6 Local development seeds from production-like data (similar sized datasets - to assist with debugging and for diagnosing unusual performance regressions):
-  * [ ] 1.6.1 Seed a specific item (for example, a product in an ecom system)
-  * [ ] 1.6.2 Seed a specified number of items in batch
-  * [ ] 1.6.3 Seed full catalogue of items
-* [ ] 1.7 Local development seed fixtures (for example, using Faker or AutoFixture)
-* [ ] 1.8 Install an application profiler for the `development` environment so that metrics such as page render times, database query times can be used to make performance improvements
-* [ ] 1.9 Infrastructure to implement auto-scaling for production where possible, otherwise refer to the [Infrastructure monitoring](#8-infrastructure-monitoring) section
-* [ ] 1.10 Decision making process documented using [Architecture Decision Records (ADRs)](adr_reference)
+* 1.2 Adhere to project coding standards and code style guideline
+  * [ ] 1.2.1 Provides a style guideline
+  * [ ] 1.2.2 Consistency within development team
+  * [ ] 1.2.3 If applicable, no linting violations (style and complexity related)
+* [ ] 1.3 `.editorconfig` as per [RFC 011][rfc_011]
+* [ ] 1.4 `Makefile` as per [RFC 012][rfc_012]
+* [ ] 1.5 `README.md` as per [RFC 013][rfc_013]
+* [ ] 1.6 `README.md` to also include references for all 3rd party service integrations
+* 1.7 Local development seeds from production-like data (similar sized datasets - to assist with debugging and for diagnosing unusual performance regressions):
+  * [ ] 1.7.1 Seed a specific item (for example, a product in an ecom system)
+  * [ ] 1.7.2 Seed a specified number of items in batch
+  * [ ] 1.7.3 Seed full catalogue of items
+* [ ] 1.8 Local development seed fixtures (for example, using Faker or AutoFixture)
+* [ ] 1.9 Install an application profiler for the `development` environment so that metrics such as page render times, database query times can be used to make performance improvements
+* [ ] 1.10 Infrastructure to implement auto-scaling for production where possible, otherwise refer to the [Infrastructure monitoring](#8-infrastructure-monitoring) section
+* [ ] 1.11 Decision making process documented using [Architecture Decision Records (ADRs)](adr_reference)
 
 ### 2. Testing
 
@@ -69,7 +73,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
   * [ ] 5.1.2 `master` branch to run tests
   * [ ] 5.1.3 Automatic deploy to `staging` environment
   * [ ] 5.1.4 Manual step to deploy to `production` environment
-   * [ ] 5.1.5 Zero downtime (e.g. blue/green environment) deployment step to __all__ environments
+  * [ ] 5.1.5 Zero downtime (e.g. blue/green environment) deployment step to __all__ environments
 * [ ] 5.2 All pipeline steps are defined in code within repository for chosen pipeline service
 
 ### 6. Application logging

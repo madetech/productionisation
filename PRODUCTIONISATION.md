@@ -41,8 +41,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
   * [ ] 1.7.3 Seed full catalogue of items
 * [ ] 1.8 Local development seed fixtures (for example, using Faker or AutoFixture)
 * [ ] 1.9 Install an application profiler for the `development` environment so that metrics such as page render times, database query times can be used to make performance improvements
-* [ ] 1.10 Infrastructure to implement auto-scaling for production, otherwise refer to the [Infrastructure monitoring](#8-infrastructure-monitoring) section
-* [ ] 1.11 Decision making process documented using [Architecture Decision Records (ADRs)](adr_reference)
+* [ ] 1.10 Decision making process documented using [Architecture Decision Records (ADRs)](adr_reference)
 
 ### 2. Testing
 
@@ -107,7 +106,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 * [ ] 7.5 Reported exceptions are resolved within a week  
   _Exceptions that have been thrown but not caught or handled safely could lead to larger problems for applications and teams. It's good for teams to have the discipline of regularly checking, or acting upon reported exceptions as they occur during development to prevent these from accruing. If code changes have been made to handle these, the exceptions should be marked as resolved in the tracking service. No reported exceptions in the past week is a positive sign of well managed exceptions._
 
-### 8. Infrastructure monitoring
+### 8. Infrastructure monitoring + scaling
 
 To be applied if infrastructure has been orchestrated and provisioned specifically for the project. Hosted PaaS solutions don't require infrastructure related monitoring at present.
 
@@ -115,16 +114,17 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 * [ ] 8.2 Monitoring agent be installed on all production infrastructure
 * [ ] 8.3 Monitoring agent could be installed on non-production infrastructure if necessary
 * [ ] 8.4 Monitoring agent hostname configured according to proposed [RFC 008 - Server naming convention][rfc_008] (_this does not apply to serverless_)
-* 8.5 Monitors configured in infrastructure monitoring service for (warn/alert):
-  * [ ] 8.5.1 Inode usage (80% / 90%)
-  * [ ] 8.5.2 CPU load (75% / 85% average over 2 minutes)
-  * [ ] 8.5.3 Disk usage (80% / 90%)
-  * [ ] 8.5.4 Memory usage (60% / 70% average over 2 minutes)
-  * [ ] 8.5.5 Host stopped reporting
-  * [ ] 8.5.6 NTP sync
-* 8.6 Monitors configured to alert via:
-  * [ ] 8.6.1 Slack channel
-  * [ ] 8.6.2 Team email address
+* [ ] 8.5 Infrastructure to implement auto-scaling for production
+* 8.6 Monitors configured in infrastructure monitoring service for (warn/alert):
+  * [ ] 8.6.1 Inode usage (80% / 90%)
+  * [ ] 8.6.2 CPU load (75% / 85% average over 2 minutes)
+  * [ ] 8.6.3 Disk usage (80% / 90%)
+  * [ ] 8.6.4 Memory usage (60% / 70% average over 2 minutes)
+  * [ ] 8.6.5 Host stopped reporting
+  * [ ] 8.6.6 NTP sync
+* 8.7 Monitors configured to alert via:
+  * [ ] 8.7.1 Slack channel
+  * [ ] 8.7.2 Team email address
 
 ### 9. Application performance management
 

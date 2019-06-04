@@ -127,7 +127,6 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 ### 10. Vulnerability alerts
 
 * [ ] 10.1 Configure either VCS hosting service or Continuous Delivery pipeline to detect and alert on vulnerable dependencies
-* [ ] 10.2 Configure notifications to send alerts
 
 ### 11. Dependency upgrade alerts
 

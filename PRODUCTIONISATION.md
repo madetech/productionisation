@@ -10,8 +10,9 @@
     * [6. Application logging](#6-application-logging)
     * [7. Exception tracking](#7-exception-tracking)
     * [8. Infrastructure monitoring](#8-infrastructure-monitoring)
-    * [9. Vulnerability alerts](#9-vulnerability-alerts)
-    * [10. Dependency upgrade alerts](#10-dependency-upgrade-alerts)
+    * [9. Application performance management (APM)](#9-application-performance-management)
+    * [10. Vulnerability alerts](#10-vulnerability-alerts)
+    * [11. Dependency upgrade alerts](#11-dependency-upgrade-alerts)
   * [Platform specific](#platform-specific)
   * [Recommended services](#recommended-services)
 
@@ -125,7 +126,7 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
   * [ ] 8.7.1 Slack channel
   * [ ] 8.7.2 Team email address
 
-### 9. Application performance management
+### 9. Application performance management (APM)
 
 * 9.1 APM service configured to monitor
   * [ ] 9.1.1 App performance

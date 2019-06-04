@@ -41,7 +41,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
   * [ ] 1.7.3 Seed full catalogue of items
 * [ ] 1.8 Local development seed fixtures (for example, using Faker or AutoFixture)
 * [ ] 1.9 Install an application profiler for the `development` environment so that metrics such as page render times, database query times can be used to make performance improvements
-* [ ] 1.10 Infrastructure to implement auto-scaling for production where possible, otherwise refer to the [Infrastructure monitoring](#8-infrastructure-monitoring) section
+* [ ] 1.10 Infrastructure to implement auto-scaling for production, otherwise refer to the [Infrastructure monitoring](#8-infrastructure-monitoring) section
 * [ ] 1.11 Decision making process documented using [Architecture Decision Records (ADRs)](adr_reference)
 
 ### 2. Testing

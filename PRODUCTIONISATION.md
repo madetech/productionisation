@@ -70,7 +70,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 
 * 5.1 Continuous Delivery pipeline configured to:
   * [ ] 5.1.1 Automatically test pull requests
-  * [ ] 5.1.2 `master` branch to run tests
+  * [ ] 5.1.2 `master` branch to run lint (_if applicable_) and tests
   * [ ] 5.1.3 Automatic deploy to `staging` environment
   * [ ] 5.1.4 Manual step to deploy to `production` environment
   * [ ] 5.1.5 Zero downtime (e.g. blue/green environment) deployment step to __all__ environments
@@ -112,7 +112,7 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 * [ ] 8.1 Sub-organisation created under parent organisation for each customer
 * [ ] 8.2 Monitoring agent be installed on all production infrastructure
 * [ ] 8.3 Monitoring agent could be installed on non-production infrastructure if necessary
-* [ ] 8.4 Monitoring agent hostname configured according to proposed [RFC 008 - Server naming convention][rfc_008] (_this doesn't apply to serverless_)
+* [ ] 8.4 Monitoring agent hostname configured according to proposed [RFC 008 - Server naming convention][rfc_008] (_this does not apply to serverless_)
 * 8.5 Monitors configured in infrastructure monitoring service for (warn/alert):
   * [ ] 8.5.1 Inode usage (80% / 90%)
   * [ ] 8.5.2 CPU load (75% / 85% average over 2 minutes)

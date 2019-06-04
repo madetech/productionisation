@@ -147,7 +147,7 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 ## Suggested services
 
 * VCS hosting - Github
-* Central logging - Papertrail, CloudWatch, Loggly, Timber.io, NLog, Stackify, Sumologic
+* Central logging - Papertrail, CloudWatch
 * Exception tracking - Sentry
 * Infrastructure monitoring - Datadog, CloudWatch
 * Security vulnerability scanning - Github

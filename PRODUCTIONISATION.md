@@ -147,12 +147,11 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
 ## Suggested services
 
 * VCS hosting - Github
-* Remote logging - Papertrail
+* Central logging - Papertrail, CloudWatch, Loggly, Timber.io, NLog, Stackify, Sumologic
 * Exception tracking - Sentry
-* Infrastructure monitoring - Datadog
+* Infrastructure monitoring - Datadog, CloudWatch
 * Security vulnerability scanning - Github
 * Dependency upgrade notifications - Dependabot
-* PaaS - Heroku
 
 [rfc_008]: https://github.com/madetech/rfcs/pull/9 "Proposed RFC 008 - Server naming convention"
 [rfc_011]: https://github.com/madetech/rfcs/blob/master/rfc-011-editorconfig.md "RFC 011 - Editorconfig"

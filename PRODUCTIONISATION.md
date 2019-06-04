@@ -50,8 +50,10 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 
 * 3.1 Application has corresponding environments and hosting for:
   * [ ] 3.1.1 `testing` for internal delivery team; this environment should only be accessible to engineers
-  * [ ] 3.1.2 `staging` for showcasing to customer, with restricted access and its setup should mirror production
-  * [ ] 3.1.3 `production` for live usage
+  * [ ] 3.1.2 `staging` for external reviews and high level end-to-end testing in a production-like infrastructure
+  * [ ] 3.1.3 `production` for live usage and showcasing to customer unless requested earlier
+  
+  _Note:_ All environments should have the same setup, however `staging`/`testing` can operate at a smaller scale (less/smaller infrastructure) than `production`
 
 ### 4. Database
 

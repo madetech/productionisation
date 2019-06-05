@@ -10,9 +10,9 @@ It's important for a team to be able to collaborate on application code together
 
 * [ ] Application source code hosted with a Git VCS service
 
-## 1.2 - Linting violations
+## 1.2 - Adhere to project coding standards
 
-### 1.2.1 - No style related linting violations
+### 1.2.1 - Provides a style guideline
 
 #### Context & justification
 
@@ -20,18 +20,16 @@ Language style guides act as a way to ensure code is written to a format that al
 
 #### Compliance
 
-* [ ] No style related linting violations or overrides
+* [ ] Provides a style guideline
 
-### 1.2.2 - No complexity related linting violations
+### 1.2.2 - Enforce coding standards (e.g. automated linter on code changes)
 
 #### Complexity & justification
 
-Complexity metrics are a good health check on code quality, but do not always understand the intent of the developer. For example, methods that consist of hundreds of lines are usually a smell that a method could be broken up into more readable and manageable methods with single responsibilities. However, some methods might have valid justifications for being 20 lines long, instead of the suggested 15 lines, whereby splitting the method up into four other methods for the sake of passing a linting check might actually make the code less readable to a developer. In these instances, a clearly defined override can be used when added inline to the method.
 
 #### Compliance
 
-* [ ] No complexity related linting violations
-* [ ] Overrides are commented inline with the code where the linting rule is being overridden
+* [ ] 
 
 ## 1.3 - Consistent code editor configurations
 

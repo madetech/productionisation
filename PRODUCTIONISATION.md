@@ -55,7 +55,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
   * [ ] 3.1.1 `testing` for internal delivery team; this environment should only be accessible to engineers
   * [ ] 3.1.2 `staging` for external reviews and high level end-to-end testing in a production-like infrastructure
   * [ ] 3.1.3 `production` for live usage and showcasing to customer
-  
+
   _Note:_ All environments should have the same setup, however `staging`/`testing` can operate at a smaller scale (less/smaller infrastructure) than `production`
 
 ### 4. Database
@@ -104,6 +104,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 * [ ] 7.3 Alerts sent to relevant team email address
 * [ ] 7.4 UUID of request is sent as additional user data
 * [ ] 7.5 Reported exceptions are resolved within a week
+  _Exceptions that have been thrown but not caught or handled safely could lead to larger problems for applications and teams. It's good for teams to have the discipline of regularly checking, or acting upon reported exceptions as they occur during development to prevent these from accruing. If code changes have been made to handle these, the exceptions should be marked as resolved in the tracking service. No reported exceptions in the past week is a positive sign of well managed exceptions._
 
 ### 8. Infrastructure monitoring + scaling
 

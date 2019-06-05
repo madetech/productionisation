@@ -53,19 +53,42 @@ By all applications using a `Makefile` as the standard interface for manipulatin
 
 * [ ] `Makefile` present for application conforming to RFC012
 
-## 1.5 - README.md
+## 1.5 - `README.md`
 
 #### Context & justification
 
-The README.md is the face of your project, therefore, it should be written as a brief review that gives a basic introduction to the software. Following a standard format helps onboarding new engineers, maintainability and gives a clear overview of our public repositories. 
+The `README.md` is the face of your project, therefore, it should be written as a brief review that gives a basic introduction to the software. Following a standard format helps onboarding new engineers, maintainability and gives a clear overview of our public repositories. 
 
 #### Compliance
-* [ ] `README.md` as per RFC 013
+* [ ] `README.md` follows the guidlines of RFC 013
 
 ## 1.6 - List of 3rd party services
 
 #### Context & justification
-Listing 3rd party services helps keep track of all dependencies, therefore, minimising the time of resolving dependency related issues. Nevertheless, gives credits to the authors. 
+Listing 3rd party services helps to keep track of all dependencies, therefore, minimising the time of resolving dependency related issues. Nevertheless, gives credits to the authors. 
 
 #### Compliance
 * [ ] 1.6 `README.md` to also include references for all 3rd party service integrations
+
+## 1.7 - Local development seeds from production-like data
+#### Context & justification
+
+Although in some scenarios it can be acceptable to use production data in local development, in most cases it's unsafe. Using dummy data that mirrors the production data can be a substitute for development, regression testing and performance testing.
+
+### 1.7.1 - Seed a specific item
+#### Context & justification
+
+#### Compliance
+* [ ] 1.7.1 Seed a specific item (for example, a product in an ecom system)
+
+### 1.7.12 - Seed a specified number of items in batch
+#### Context & justification
+
+#### Compliance
+* [ ] 1.7.2 Seed a specified number of items in batch
+
+### 1.7.3 - Seed full catalogue of items
+#### Context & justification
+
+#### Compliance
+* [ ] 1.7.3 Seed full catalogue of items

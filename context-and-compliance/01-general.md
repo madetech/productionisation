@@ -67,7 +67,7 @@ The README.md is the face of your project, therefore, it should be written as a 
 ## 1.6 - List of 3rd party services
 
 #### Context & justification
-
+Listing 3rd party services helps keep track of all dependencies, therefore, minimising the time of resolving dependency related issues. Nevertheless, gives credits to the authors. 
 
 #### Compliance
 * [ ] 1.6 `README.md` to also include references for all 3rd party service integrations

@@ -51,7 +51,7 @@ Usually the `make` tool is available 'out-of-the-box' with all development machi
 
 By all applications using a `Makefile` as the standard interface for manipulating an application during development, and with a common set of targets, developers will have to spend less time onboarding onto a project.
 
-#### Compliance
+#### Compliance
 
 * [ ] `Makefile` present for application conforming to RFC012
 
@@ -59,10 +59,15 @@ By all applications using a `Makefile` as the standard interface for manipulatin
 
 #### Context & justification
 
+The README.md is the face of your project, therefore, it should be written as a brief review that gives a basic introduction to the software. Following a standard format helps onboarding new engineers, maintainability and gives a clear overview of our public repositories. 
+
 #### Compliance
+* [ ] `README.md` as per RFC 013
 
 ## 1.6 - List of 3rd party services
 
 #### Context & justification
 
+
 #### Compliance
+* [ ] 1.6 `README.md` to also include references for all 3rd party service integrations

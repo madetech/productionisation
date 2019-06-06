@@ -91,7 +91,7 @@ Similar to the previous point, using a number of items to debug related producti
 
 ### 1.7.3 - Seed full catalogue of items
 #### Context & justification
-Having a full range of items not always feasible or needed, but ideally, a system should be tested for full range of items or large data tests.
+Having a full range of items not always feasible or needed, but ideally, a system should be tested for full range of items or large data sets.
 
 #### Compliance
 * [ ] 1.7.3 Seed full catalogue of items
@@ -111,15 +111,10 @@ Identifying and tackling performance related issues helps to deliver high qualit
 #### Compliance
 * [ ] 1.9 Install an application profiler for the `development` environment so that metrics such as page render times, database query times can be used to make performance improvements
 
-## 1.9 Application profiler for the `development` environment 
-
-#### Context & justification
-Identifying and tackling performance related issues helps to deliver high quality and efficient code early. Using application profiler to be aware of these to address them by code refactoring or performance tweaks.
-
 ## 1.10 Decision making process documented using Architecture Decision Records
 
 #### Context & justification
-
+Software design choices should be documented clearly so that we know why and when we made those decisions. 
 
 #### Compliance
 * [ ] 1.10 Decision making process documented using ADRs

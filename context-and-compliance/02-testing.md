@@ -4,7 +4,7 @@
 
 #### Context & justification
 
-Ensuring **Test Driven Development (TDD)** is widely practiced across Made Tech, tests should be written for _every_ piece of code. Test code coverage of 90% minimum **should** indicate that 10% of code is not covered by tests. In some cases, tests cannot be written for every piece of code so 90% is chosen as the minimum. However, all project teams should aim to write tests for 100% of their code.
+Ensuring **Test Driven Development (TDD)** is widely practiced across Made Tech, tests should be written for _every_ piece of code. Test code coverage of 90% minimum **should** indicate that 10% of code is not covered by tests. In some cases, tests cannot be written for every piece of code. To accommodate legacy projects where the structure of the project prevents full test code coverage, 90% is chosen as the minimum. However, all project teams, especially greenfield projects, should aim to write tests for 100% of their code.
 
 #### Compliance
 

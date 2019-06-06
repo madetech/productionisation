@@ -14,7 +14,7 @@ Ensuring **Test Driven Development (TDD)** is widely practiced across Made Tech,
 
 #### Context & justification
 
-Each feature should be tested in isolation hence unit testing. Unit tests are necessary in order to ensure the code written  is correct. These tests should typically run in under 30 seconds unless there is good reasoning behind why this cannot be achieved.
+Each feature should be tested in isolation hence unit testing. Unit tests are necessary in order to ensure the code written  is correct. These tests should typically run in under 30 seconds unless there is good reasoning behind why this cannot be achieved. The main aim of this is to accommodate quick feedback loops.
 
 #### Compliance
 

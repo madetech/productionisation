@@ -73,22 +73,48 @@ Listing 3rd party services helps to keep track of all dependencies, therefore, m
 ## 1.7 - Local development seeds from production-like data
 #### Context & justification
 
-Although in some scenarios it can be acceptable to use production data in local development, in most cases it's unsafe. Using dummy data that mirrors the production data can be a substitute for development, regression testing and performance testing.
+Although in some scenarios it can be acceptable to use production data in local development, in most cases it's unsafe. Using dummy data that mirrors the production data can be a substitute for development, regression testing and performance testing. Having a bunch of production-like data populated helps onboarding new developers.
 
 ### 1.7.1 - Seed a specific item
 #### Context & justification
+This can be helpful to debug production issues that are tied to a specific item, for instance having the same product locally from an ecom. If the data contains sensitive information, obfuscation scripts should be run against it.
 
 #### Compliance
 * [ ] 1.7.1 Seed a specific item (for example, a product in an ecom system)
 
 ### 1.7.12 - Seed a specified number of items in batch
 #### Context & justification
+Similar to the previous point, using a number of items to debug related production issues, without having the complete range of items. This is helpful in test scenarios when the identity of the items a less important that having a certain number of items populated.
 
 #### Compliance
 * [ ] 1.7.2 Seed a specified number of items in batch
 
 ### 1.7.3 - Seed full catalogue of items
 #### Context & justification
+Having a full range of items is not always feasible or needed, but ideally, a system should be tested for full range of items or large data sets.
 
 #### Compliance
 * [ ] 1.7.3 Seed full catalogue of items
+
+## 1.8 Local development seed fixtures
+#### Context & justification
+Populating data for tests should be auto-generated to have real-looking test data while minimising setup time.
+
+#### Compliance
+* [ ] 1.8 Local development seed fixtures (for example, using Faker or AutoFixture)
+
+## 1.9 Application profiler for the `development` environment 
+
+#### Context & justification
+Identifying and tackling performance related issues helps to deliver high quality and efficient code early. Using application profiler to be aware of these to address them by code refactoring or performance tweaks.
+
+#### Compliance
+* [ ] 1.9 Install an application profiler for the `development` environment so that metrics such as page render times, database query times can be used to make performance improvements
+
+## 1.10 Decision making process documented using Architecture Decision Records
+
+#### Context & justification
+Software design choices should be documented clearly so that we know why and when we made those decisions. 
+
+#### Compliance
+* [ ] 1.10 Decision making process documented using ADRs

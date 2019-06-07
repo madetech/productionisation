@@ -6,7 +6,7 @@
 
 #### Context & justification
 
-The `testing` environment, as the name suggests, is an environment for testing. This is where all development/testing is done. Hence, it should only be accessible to engineers and for internal delivery teams. Self-explanatory.
+The `testing` environment, as the name suggests, is an environment for testing. This is where all development/testing is done. Hence, it should only be accessible to engineers and for internal delivery teams.
 
 #### Compliance
 

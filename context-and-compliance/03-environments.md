@@ -6,11 +6,11 @@
 
 #### Context & justification
 
-The `testing` environment, as the name suggests, is an environment for testing. This is where all development/testing is done. Hence, it should only be accessible to engineers and for internal delivery teams.
+The `testing` environment, as the name suggests, is an environment for testing. This is where manual testing for the development team occurs. Hence, it should only be accessed by those within the delivery teams.
 
 #### Compliance
 
-* [ ] `testing` for internal delivery team; this environment should only be accessible to engineers
+* [ ] `testing` should only be accessed by those within the delivery teams
 
 ### 3.1.2 `staging` environment
 

@@ -16,7 +16,7 @@ The `testing` environment, as the name suggests, is an environment for testing. 
 
 #### Context & justification
 
-The `staging` environment is an environment typically used for external (customer, users, etc) reviews. The staging environment may also require showcasing to customers depending on feedback from reviews, however it is also on a feature by feature basis. This environment is additionally used for high level end-to-end (E2E) testing, as part of **Acceptance Test Driven Development (ATDD)**, which tests from the input of the system to the output of the system.
+The `staging` environment is an environment typically used for external (customer, users, etc) reviews. The staging environment may also require showcasing to customers depending on feedback from reviews, however this should be on a feature-by-feature basis. This environment is additionally used for high level end-to-end (E2E) testing, as part of **Acceptance Test Driven Development (ATDD)**, which tests from the input of the system to the output of the system.
 
 #### Compliance
 

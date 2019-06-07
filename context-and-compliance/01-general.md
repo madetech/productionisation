@@ -91,7 +91,7 @@ Similar to the previous point, using a number of items to debug related producti
 
 ### 1.7.3 - Seed full catalogue of items
 #### Context & justification
-Having a full range of items not always feasible or needed, but ideally, a system should be tested for full range of items or large data sets.
+Having a full range of items is not always feasible or needed, but ideally, a system should be tested for full range of items or large data sets.
 
 #### Compliance
 * [ ] 1.7.3 Seed full catalogue of items

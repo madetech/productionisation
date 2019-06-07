@@ -10,7 +10,7 @@ The `testing` environment, as the name suggests, is an environment for testing. 
 
 #### Compliance
 
-* [ ] `testing` should only be accessed by those within the delivery teams
+* [ ] `testing` should only be accessed by those within delivery teams
 
 ### 3.1.2 `staging` environment
 

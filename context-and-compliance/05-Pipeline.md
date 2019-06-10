@@ -47,7 +47,7 @@ The process of deploying to `production` environment should be manual. This is t
 
 #### Context & justification
 
-There should be a zero downtime deployment process for the `staging` and `production` environments. An example of a zero downtime deployment would be the implementation of a blue/green environment. This is to ensure there is no downtime in the case of failure, scheduled downtime, etc.
+There should be a zero downtime deployment process for the `staging` and `production` environments. An example of a zero downtime deployment would be the implementation of a blue/green environment. This is to ensure there is no downtime in the case of failure.
 
 #### Compliance
 

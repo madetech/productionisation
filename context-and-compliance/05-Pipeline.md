@@ -57,7 +57,7 @@ There should be a zero downtime deployment process for the `staging` and `produc
 
 #### Context & justification
 
-This is to ensure the team is aware of the CD pipeline process. In addition, defining your pipeline steps in code gives developers the access to more configuration options opposed to a web interface. This can also be versioned, audited as well as allowing review of build pipelines.
+This is to ensure the team is aware of the CD pipeline process. In addition, defining your pipeline steps in code can sometimes give developers the access to more configuration options opposed to a web interface (_note_: this is not always the case). This can also be versioned, audited as well as allowing review of build pipelines. Hence, everyone is aware of the pipeline process as it is in one place.
 
 #### Compliance
 

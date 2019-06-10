@@ -1,16 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,600&display=swap");
+
 body {
   margin: 0;
   padding: 0; 
+  font-weight: 300;
+  font-family: montserrat, sans-serif;
+  font-size: 16px;
 }
 
 html {
   min-height: 100%;
 }
 
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 150%;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #005bdf;
+  text-decoration: underline;
 }
 
 /*
@@ -49,10 +79,21 @@ ul {
   width: 0;
 }
 
+#side_bar .logo_holder nav a {
+  text-decoration: underline;
+  font-size: 13px;
+  display: block;
+  float: left;
+  border-right: 1px solid #fff;
+  margin-right: 2px;
+  padding-right: 2px;
+}
+
 #side_bar ul li a{
   display: block;
-  line-height: 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 0;
 }
 
 #side_bar a {
@@ -63,14 +104,13 @@ ul {
 #side_bar ul li ol {
   color: #fff;
   margin: 0;
-  overflow: hidden;
   padding: 0;
-  max-height: 0;
+  margin-left: 20px;
 }
 
-#side_bar ul li:hover ol {
-  max-height: 1000px;
-  transition: max-height ease-in 1s;
+#side_bar ul li ol li a {
+  padding: 5px 0;
+  font-size: 13px;
 }
 
 main {
@@ -84,5 +124,80 @@ main {
 
 main > div {
   padding: 60px;
+  width: 720px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
 
+/* 
+
+*/
+.slide .holder {
+  height: 300px;
+  width: 300px;
+  border-radius: 150px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)
+  }
+
+.slide .holder span em {
+  -webkit-animation-duration: 2s;
+  border-radius: 999px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background: #229900;
+}
+
+.slide .holder > span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute
+}
+
+.slide .holder > span:first-child {
+  left: 0
+}
+
+.slide .holder > span:last-of-type {
+  left: 50%
+}
+
+.slide .holder span:first-child em {
+  left: 100%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transform-origin: 0 50%
+}
+
+.slide .holder span:last-of-type em {
+  left: -100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transform-origin: 100% 50%
+}
+
+.slide .holder h5 {
+  position: absolute;
+  content: “”;
+  width: 80%;
+  height: 80%;
+  border-radius: 100%;
+  top: 10%;
+  left: 10%;
+  background: #fff;
+  line-height: 240px;
+  text-align: center;
+  font-size: 50px;
+  color: #ccc;
+}
+
+.slide .holder h5 span + span {
+  font-size: 30px;
 }

@@ -24,9 +24,19 @@
   <!--[if lt IE 9]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
   <![endif]-->
+  <script src="/assets/js/library.js?v=c7e34c8dad100b89a4f89fc5db045c5edb8366a8"></script>
 </head>
 
 <body>
+
+<!--
+  TODO:
+  1. Seperate menu into markdown
+  2. Use transform rotate in calculate -> dinamically update progress bar
+  3. Mobile optimise menu
+  4. Final touches
+
+-->
 
 <input type="checkbox" id="side_bar_closer" />
 
@@ -93,6 +103,12 @@
             </li>
           </ol>
         </li>
+        <li>
+            <a>Platform specific</a>
+          </li>
+          <li>
+            <a>Recommended services</a>
+          </li>
       </ul>
     </nav>
   </div>
@@ -164,6 +180,20 @@
       </div>
     </div>
   </main>
+
+    <div class=progress_bar>
+      <div class="slide">
+        <div class=holder>
+          <span>
+            <em style="transform: rotate(0deg)"></em>
+          </span>
+          <span>
+            <em style="transform: rotate(118.8deg)"></em>
+          </span>
+          <h5><span id="percentage_holder"></span><span>%</span></h5>
+        </div>
+      </div>
+    </div>
 
   <script
     src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

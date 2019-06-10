@@ -24,9 +24,19 @@
   <!--[if lt IE 9]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
   <![endif]-->
+  <script src="/assets/js/library.js?v=c7e34c8dad100b89a4f89fc5db045c5edb8366a8"></script>
 </head>
 
 <body>
+
+<!--
+  TODO:
+  1. Seperate menu into markdown
+  2. Use transform rotate in calculate -> dinamically update progress bar
+  3. Mobile optimise menu
+  4. Final touches
+
+-->
 
 <input type="checkbox" id="side_bar_closer" />
 
@@ -93,6 +103,12 @@
             </li>
           </ol>
         </li>
+        <li>
+            <a>Platform specific</a>
+          </li>
+          <li>
+            <a>Recommended services</a>
+          </li>
       </ul>
     </nav>
   </div>
@@ -115,30 +131,6 @@
     <div>
       <div>
         <h1 id="productionisation-checklist">Productionisation Checklist</h1>
-
-<ul>
-  <li><a href="#supportability-checklist">Productionisation Checklist</a>
-    <ul>
-      <li><a href="#project-readiness-checklist">Project readiness checklist</a>
-        <ul>
-          <li><a href="#1-general-requirements">1. General requirements</a></li>
-          <li><a href="#2-testing">2. Testing</a></li>
-          <li><a href="#3-environments">3. Environments</a></li>
-          <li><a href="#4-database">4. Database</a></li>
-          <li><a href="#5-pipeline">5. Pipeline</a></li>
-          <li><a href="#6-application-logging">6. Application logging</a></li>
-          <li><a href="#7-exception-tracking">7. Exception tracking</a></li>
-          <li><a href="#8-infrastructure-monitoring">8. Infrastructure monitoring</a></li>
-          <li><a href="#9-application-performance-management">9. Application performance management (APM)</a></li>
-          <li><a href="#10-vulnerability-alerts">10. Vulnerability alerts</a></li>
-          <li><a href="#11-dependency-upgrade-alerts">11. Dependency upgrade alerts</a></li>
-        </ul>
-      </li>
-      <li><a href="#platform-specific">Platform specific</a></li>
-      <li><a href="#recommended-services">Recommended services</a></li>
-    </ul>
-  </li>
-</ul>
 
 <h2 id="project-readiness-checklist">Project readiness checklist</h2>
 
@@ -355,6 +347,20 @@
       </div>
     </div>
   </main>
+
+    <div class=progress_bar>
+      <div class="slide">
+        <div class=holder>
+          <span>
+            <em style="transform: rotate(0deg)"></em>
+          </span>
+          <span>
+            <em style="transform: rotate(118.8deg)"></em>
+          </span>
+          <h5><span id="percentage_holder"></span><span>%</span></h5>
+        </div>
+      </div>
+    </div>
 
   <script
     src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

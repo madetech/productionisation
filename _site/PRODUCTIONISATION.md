@@ -1,21 +1,5 @@
 # Productionisation Checklist
 
-* [Productionisation Checklist](#supportability-checklist)
-  * [Project readiness checklist](#project-readiness-checklist)
-    * [1. General requirements](#1-general-requirements)
-    * [2. Testing](#2-testing)
-    * [3. Environments](#3-environments)
-    * [4. Database](#4-database)
-    * [5. Pipeline](#5-pipeline)
-    * [6. Application logging](#6-application-logging)
-    * [7. Exception tracking](#7-exception-tracking)
-    * [8. Infrastructure monitoring](#8-infrastructure-monitoring)
-    * [9. Application performance management (APM)](#9-application-performance-management)
-    * [10. Vulnerability alerts](#10-vulnerability-alerts)
-    * [11. Dependency upgrade alerts](#11-dependency-upgrade-alerts)
-  * [Platform specific](#platform-specific)
-  * [Recommended services](#recommended-services)
-
 ## Project readiness checklist
 
 Ensuring that your project adheres to the following RFCs is a good first step as these will be referenced further below:

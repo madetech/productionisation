@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  padding: 0; 
+  padding: 0;
   font-weight: 300;
   font-family: montserrat, sans-serif;
   font-size: 16px;
@@ -58,9 +58,9 @@ a:hover {
   left: 0;
   bottom: 0;
   position: fixed;
-  background-image: linear-gradient(to right, #55cc33, #229900);
+  background-image: linear-gradient(to right,#439a63,#00ce5f);
   z-index: 1;
-} 
+}
 
 #side_bar_closer:checked + .side_bar_background {
     width: 0;
@@ -98,7 +98,7 @@ a:hover {
 
 #side_bar a {
   color: #fff;
-  
+
 }
 
 #side_bar ul li ol {
@@ -129,7 +129,7 @@ main > div {
   box-sizing: border-box;
 }
 
-/* 
+/*
 
 */
 .slide .holder {
@@ -151,7 +151,7 @@ main > div {
   height: 100%;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  background: #229900;
+  background: #439a63;
 }
 
 .slide .holder > span {

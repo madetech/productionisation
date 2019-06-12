@@ -12,12 +12,9 @@ html {
   min-height: 100%;
 }
 
-h1, h2, h3, h4, h5 {
-  font-weight: 600;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
-}
+/* h1, h2, h3, h4, h5 {
+
+} */
 
 p {
   line-height: 150%;
@@ -43,9 +40,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/*
-
-*/
 
 #side_bar_closer {
   display: none;
@@ -146,7 +140,7 @@ main > div {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)
   }
 
-.slide .holder span em {
+.holder span em {
   -webkit-animation-duration: 2s;
   border-radius: 999px;
   position: absolute;
@@ -154,43 +148,42 @@ main > div {
   height: 100%;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  background: #439a63;
 }
 
-.slide .holder > span {
+.holder > span {
   width: 50%;
   height: 100%;
   overflow: hidden;
   position: absolute
 }
 
-.slide .holder > span:first-child {
+.holder > span:first-child {
   left: 0
 }
 
-.slide .holder > span:last-of-type {
+.holder > span:last-of-type {
   left: 50%
 }
 
-.slide .holder span:first-child em {
+.holder span:first-child em {
   left: 100%;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   transform-origin: 0 50%
 }
 
-.slide .holder span em {
-  transition: transform ease-in .2s
+.holder span em {
+  transition: transform ease-in .2s, background ease-in .2s
 }
 
-.slide .holder span:last-of-type em {
+.holder span:last-of-type em {
   left: -100%;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   transform-origin: 100% 50%
 }
 
-.slide .holder h5 {
+.holder h5 {
   position: absolute;
   content: “”;
   width: 80%;
@@ -203,8 +196,12 @@ main > div {
   text-align: center;
   font-size: 50px;
   color: #ccc;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
-.slide .holder h5 span + span {
+.holder h5 span + span {
   font-size: 30px;
 }

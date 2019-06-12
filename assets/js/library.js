@@ -27,16 +27,41 @@ var calculator = function(checkboxes){
 }
 
 var percentageDisplayer = function(percentage){
-  document.getElementById("percentage_holder").innerHTML = Math.round(percentage * 100)
+  document.getElementById("percentage_holder").innerHTML = Math.round(percentage * 100);
 
-  var right_slice = percentage * 360
-  if (right_slice > 180) {
-    var left_slice = right_slice - 180
-    document.getElementById("slice_2").style.transform = "rotate("+left_slice+"deg)"
-    document.getElementById("slice_1").style.transform = "rotate(180deg)"
+  var colour_green = '#439a63'
+  var colour_red = '#F44336'
+  var colour_yellow = '#FFEB3B'
+
+  var slice_1_deg = percentage * 360;
+
+  var slice_1 = document.getElementById("slice_1");
+  var slice_2 = document.getElementById("slice_2");
+
+  switch (Math.floor(percentage * 3)) {
+    case 0:
+      slice_1.style.background = colour_red;
+      slice_2.style.background = colour_red;
+      break;
+
+    case 1:
+      slice_1.style.background = colour_yellow;
+      slice_2.style.background = colour_yellow;
+      break;
+
+    default:
+      slice_1.style.background = colour_green;
+      slice_2.style.background = colour_green;
+      break;
+  }
+
+  if (slice_1_deg > 180) {
+    var slice_2_deg = slice_1_deg - 180;
+    slice_2.style.transform = "rotate("+slice_2_deg+"deg)";
+    slice_1.style.transform = "rotate(180deg)";
   } else {
-    document.getElementById("slice_2").style.transform = "rotate(0deg)"
-    document.getElementById("slice_1").style.transform = "rotate("+right_slice+"deg)"
+    slice_2.style.transform = "rotate(0deg)";
+    slice_1.style.transform = "rotate("+slice_1_deg+"deg)";
   }
 }
 

@@ -20,7 +20,7 @@ The full checklist can be seen here: [`PRODUCTIONISATION.md`][link_productionisa
 
 We believe that following this list will encourage teams to consistently follow best practices and improve their projects, which would lead to making a greater impact by delivering faster and learning more.
 
-## How apply this to your project
+## How to apply this to your project
   1. Copy the check-list up for your project - in a new tab in the [spreadsheet][spreadsheet].
   2. Continuously update the checklist, at least once a month.
   3. Provide feedback, addition and removal of points to the Chalet.

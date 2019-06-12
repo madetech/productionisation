@@ -87,7 +87,7 @@ Attribution-ShareAlike 4.0 International: The licensor permits others to copy, d
 
 ## Copyright
 
-Made Tech 2018 &copy;
+Made Tech 2019 &copy;
 
 [link_productionisation]: /PRODUCTIONISATION.md
 [spreadsheet]: https://docs.google.com/spreadsheets/d/1HRJ2SENxAnKmk66Xo6KIqRcJf6EHJqjAdpHJ3IouhyM/edit#gid=260137935

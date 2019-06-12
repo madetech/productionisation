@@ -32,23 +32,7 @@ We believe that following this list will encourage teams to consistently follow 
   Once you’re comfortable that you have satisfied the criteria, tick the box. If you’re on the fence, don’t.
 
 ## How to measure success
-We meas ure success by measuring against the following points
-
-### Improving the reliability of applications for users
-
-#### Outcomes
-  - All teams tracking positive progress on checklist
-  - Low level of bugs being reported
-  - Customers perceive our applications to be reliable
-  - User perceive our applications to be reliable
-
-#### When will we review
-  - Monthly p15n check-in during Learn Tech before quarterly update
-
-#### What do we want to see
-  - See >5% improvement per month per application
-  - Positive feedback regarding low level of bugs when interviewing delivery managers
-  - Positive review from customer from delivery managers
+We measure success by measuring against the following points
 
 ### Improving the reliability of applications for users
 

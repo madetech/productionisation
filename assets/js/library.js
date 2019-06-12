@@ -1,14 +1,18 @@
 window.onload = function(){
-  var checkboxes = document.querySelectorAll(".task-list-item-checkbox");
-  checkboxes.forEach(function(checkbox, i){
-    checkbox.onchange = function(){
-      calculator(checkboxes)
-      if (this.checked) cookie.create("checkbox-"+i)
-    }
-    checkbox.disabled = false;
-    checkbox.checked = cookie.read("checkbox-"+i)? true:false;
-  });
-  calculator(checkboxes)
+  if ( window.location.pathname.indexOf("/PRODUCTIONISATION.html") != -1) {
+    document.getElementsByClassName("progress_bar")[0].style.display = "block";
+
+    var checkboxes = document.querySelectorAll(".task-list-item-checkbox");
+    checkboxes.forEach(function(checkbox, i){
+      checkbox.onchange = function(){
+        calculator(checkboxes)
+        if (this.checked) cookie.create("checkbox-"+i)
+      }
+      checkbox.disabled = false;
+      checkbox.checked = cookie.read("checkbox-"+i)? true:false;
+    });
+    calculator(checkboxes)
+  }
 }
 
 var calculator = function(checkboxes){
@@ -19,11 +23,21 @@ var calculator = function(checkboxes){
     };
   });
 
-  percentageDisplayer((checked/checkboxes.length) * 100)
+  percentageDisplayer((checked/checkboxes.length))
 }
 
 var percentageDisplayer = function(percentage){
-  document.getElementById("percentage_holder").innerHTML = Math.round(percentage)
+  document.getElementById("percentage_holder").innerHTML = Math.round(percentage * 100)
+
+  var right_slice = percentage * 360
+  if (right_slice > 180) {
+    var left_slice = right_slice - 180
+    document.getElementById("slice_2").style.transform = "rotate("+left_slice+"deg)"
+    document.getElementById("slice_1").style.transform = "rotate(180deg)"
+  } else {
+    document.getElementById("slice_2").style.transform = "rotate(0deg)"
+    document.getElementById("slice_1").style.transform = "rotate("+right_slice+"deg)"
+  }
 }
 
 

@@ -132,7 +132,10 @@ main > div {
 /*
 
 */
-.slide .holder {
+.progress_bar {
+  display: none
+}
+.progress_bar {
   height: 300px;
   width: 300px;
   border-radius: 150px;
@@ -174,6 +177,10 @@ main > div {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   transform-origin: 0 50%
+}
+
+.slide .holder span em {
+  transition: transform ease-in .2s
 }
 
 .slide .holder span:last-of-type em {

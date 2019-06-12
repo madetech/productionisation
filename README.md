@@ -20,19 +20,19 @@ The full checklist can be seen here: [`PRODUCTIONISATION.md`][link_productionisa
 
 We believe that following this list will encourage teams to consistently follow best practices and improve their projects, which would lead to making a greater impact by delivering faster and learning more.
 
-## How apply this to your project
-  1. Copy the check-list up for your project - in a new tab in the [spreadsheet][spreadsheet].
+## How to apply this to your project
+  1. Copy the checklist for your project - new tab in the [spreadsheet][spreadsheet].
   2. Continuously update the checklist, at least once a month.
   3. Provide feedback, addition and removal of points to the Chalet.
 
 ### Granularity
-  Each project that has a unique set of staff-members, instances and stack, should have its own checklist.
+  Each project that has a unique set of staff/team members, instances and stack, should have its own checklist.
 
 ### Definition of Done
   Once you’re comfortable that you have satisfied the criteria, tick the box. If you’re on the fence, don’t.
 
 ## How to measure success
-We measure success by measuring against the following points
+We measure success by considering the following points:
 
 ### Improving the reliability of applications for users
 
@@ -49,6 +49,8 @@ We measure success by measuring against the following points
   - See >5% improvement per month per application
   - Positive feedback regarding low level of bugs when interviewing delivery managers
   - Positive review from customer from delivery managers
+
+### Improving the reliability of applications for users
 
 ### Customers are aware of productionisation best practices and can see the quality we bake into applications
 
@@ -71,7 +73,7 @@ Attribution-ShareAlike 4.0 International: The licensor permits others to copy, d
 
 ## Copyright
 
-Made Tech 2018 &copy;
+Made Tech 2019 &copy;
 
 [link_productionisation]: /PRODUCTIONISATION.md
 [spreadsheet]: https://docs.google.com/spreadsheets/d/1HRJ2SENxAnKmk66Xo6KIqRcJf6EHJqjAdpHJ3IouhyM/edit#gid=260137935

@@ -50,8 +50,6 @@ We measure success by considering the following points:
   - Positive feedback regarding low level of bugs when interviewing delivery managers
   - Positive review from customer from delivery managers
 
-### Improving the reliability of applications for users
-
 ### Customers are aware of productionisation best practices and can see the quality we bake into applications
 
 #### Outcomes

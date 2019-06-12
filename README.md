@@ -26,7 +26,7 @@ We believe that following this list will encourage teams to consistently follow 
   3. Provide feedback, addition and removal of points to the Chalet.
 
 ### Granularity
-  Each project that has a unique set of staff-members, instances and stack, should have its own checklist.
+  Each project that has a unique set of staff/team members, instances and stack, should have its own checklist.
 
 ### Definition of Done
   Once you’re comfortable that you have satisfied the criteria, tick the box. If you’re on the fence, don’t.

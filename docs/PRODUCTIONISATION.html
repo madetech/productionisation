@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico?v=">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Productionisation Checklist | productionisation</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Productionisation Checklist" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Made Tech Productionisation Checklist for Software Projects" />
+<meta property="og:description" content="The Made Tech Productionisation Checklist for Software Projects" />
+<link rel="canonical" href="http://localhost:4000/PRODUCTIONISATION.html" />
+<meta property="og:url" content="http://localhost:4000/PRODUCTIONISATION.html" />
+<meta property="og:site_name" content="productionisation" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/PRODUCTIONISATION.html","description":"The Made Tech Productionisation Checklist for Software Projects","@type":"WebPage","headline":"Productionisation Checklist","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/assets/css/style-csaba.css?v=11bf83016b60234d51461f48e1f35443a1fa6e8ca">
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+  <script src="/assets/js/library.js"></script>
+</head>
+
+<body>
+
+<!--
+  TODO:
+  1. Seperate menu into markdown
+  2. Use transform rotate in calculate -> dinamically update progress bar
+  3. Mobile optimise menu
+  4. Final touches
+
+-->
+
+<input type="checkbox" id="side_bar_closer" />
+
+<div class=side_bar_background>
+</div>
+
+<div id="side_bar">
+  <label for="side_bar_closer"></label>
+
+  <div class="logo_holder">
+    <a href="/">
+    <span class="header_logo_type__text">p15n checklist</span>
+    <span class="px-3">by</span>
+    <img alt="Made Tech" itemProp="logo" src="/assets/images/made-tech-logo-white.png" width="120px" />
+    </a>
+  </div>
+
+  <div class="header_nav">
+    <nav class="navbar-nav align-items-center">
+      <ul>
+        <li>
+          <a>Project readiness checklist</a>
+          <ol>
+            <li>
+              <a href="#1-general-requirements">General requirements</a>
+            </li>
+            <li>
+              <a href="#2-testing">Testing</a>
+            </li>
+            <li>
+              <a href="#3-environments">Environments</a>
+            </li>
+            <li>
+              <a href="#4-database">Database</a>
+            </li>
+            <li>
+              <a href="#5-pipeline">Pipeline</a>
+            </li>
+            <li>
+              <a href="#6-application-logging">Application logging</a>
+            </li>
+            <li>
+              <a href="#7-exception-tracking">Exception tracking</a>
+            </li>
+            <li>
+              <a href="#8-infrastructure-monitoring--scaling">Infrastructure monitoring</a>
+            </li>
+            <li>
+              <a href="#9-application-performance-management">Application performance management</a>
+            </li>
+            <li>
+              <a href="#10-vulnerability-alerts">Vulnerability alerts</a>
+            </li>
+            <li>
+              <a href="#11-dependency-upgrade-alerts">Dependency upgrade alerts</a>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <a>Platform specific</a>
+        </li>
+        <li>
+          <a>Recommended services</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <nav class="footer">
+    <a href="https://www.madetech.com">Who are Made Tech?</a>
+    <a href="https://www.madetech.com/blog">Blog</a>
+    <a href="https://learn.madetech.com">Learn</a>
+    <a href="https://www.madetech.com/careers">Careers</a>
+
+    <div>
+      <a class="footer__social_link" href="https://www.madetech.com/ext/linkedin">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </a>
+
+      <a class="footer__social_link" href="https://www.madetech.com/ext/twitter">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+
+      <a class="footer__social_link" href="https://www.madetech.com/ext/github">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <div>
+    <div>
+      <h1 id="productionisation-checklist">Productionisation Checklist</h1>
+
+<h2 id="project-readiness-checklist">Project readiness checklist</h2>
+
+<p>Ensuring that your project adheres to the following RFCs is a good first step as these will be referenced further below:</p>
+
+<ul>
+  <li><a href="https://github.com/madetech/rfcs/pull/9" title="Proposed RFC 008 - Server naming convention">RFC 008 - Server naming convention</a></li>
+  <li><a href="https://github.com/madetech/rfcs/blob/master/rfc-011-editorconfig.md" title="RFC 011 - Editorconfig">RFC 011 - Editorconfig</a></li>
+  <li><a href="https://github.com/madetech/rfcs/blob/master/rfc-012-makefile-standards.md" title="RFC 012 - Makefile standards">RFC 012 - Makefile standards</a></li>
+  <li><a href="https://github.com/madetech/rfcs/blob/master/rfc-013-code-repositories.md" title="RFC 013 - Code repository standards">RFC 013 - Code repository standards</a></li>
+</ul>
+
+<h3 id="1-general-requirements">1. <a href="/context-and-compliance/01-general.html">General requirements</a></h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />1.1 Application source code hosted with a Git VCS service</li>
+  <li class="task-list-item">1.2 Adhere to project coding standards
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />1.2.1 Provides a style guideline</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />1.2.2 Enforce coding standards (e.g. automated linter on code changes)</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />1.3 <code class="highlighter-rouge">.editorconfig</code> as per <a href="https://github.com/madetech/rfcs/blob/master/rfc-011-editorconfig.md" title="RFC 011 - Editorconfig">RFC 011</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />1.4 <code class="highlighter-rouge">Makefile</code> as per <a href="https://github.com/madetech/rfcs/blob/master/rfc-012-makefile-standards.md" title="RFC 012 - Makefile standards">RFC 012</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />1.5 <code class="highlighter-rouge">README.md</code> as per <a href="https://github.com/madetech/rfcs/blob/master/rfc-013-code-repositories.md" title="RFC 013 - Code repository standards">RFC 013</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />1.6 <code class="highlighter-rouge">README.md</code> to also include references for all 3rd party service integrations</li>
+  <li class="task-list-item">1.7 Local development seeds from production-like data (similar sized datasets - to assist with debugging and for diagnosing unusual performance regressions):
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />1.7.1 Seed a specific item (for example, a product in an ecom system)</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />1.7.2 Seed a specified number of items in batch</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />1.7.3 Seed full catalogue of items</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />1.8 Local development seed fixtures (for example, using Faker or AutoFixture)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />1.9 Install an application profiler for the <code class="highlighter-rouge">development</code> environment so that metrics such as page render times, database query times can be used to make performance improvements</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />1.10 Decision making process documented using <a href="adr_reference">Architecture Decision Records (ADRs)</a></li>
+</ul>
+
+<h3 id="2-testing">2. Testing</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />2.1 Test code coverage of 90% minimum</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />2.2 Unit tests that run in under 30 seconds</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />2.3 End-to-end tests that run in under 5 minutes</li>
+</ul>
+
+<h3 id="3-environments">3. Environments</h3>
+
+<ul>
+  <li>3.1 Application has corresponding environments and hosting for:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />3.1.1 <code class="highlighter-rouge">testing</code> should only be accessed by those within delivery teams</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />3.1.2 <code class="highlighter-rouge">staging</code> for external reviews and high level end-to-end testing in a production-like infrastructure</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />3.1.3 <code class="highlighter-rouge">production</code> for live usage and showcasing to customer</li>
+    </ul>
+
+    <p><em>Note:</em> All environments should have the same setup, however <code class="highlighter-rouge">staging</code>/<code class="highlighter-rouge">testing</code> can operate at a smaller scale (less/smaller infrastructure) than <code class="highlighter-rouge">production</code></p>
+  </li>
+</ul>
+
+<h3 id="4-database">4. Database</h3>
+
+<ul>
+  <li>4.1 Production database has:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />4.1.1 Automatic failover</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />4.1.2 Daily automatic backups</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />4.1.3 If feasible with provider, enable transaction log backups for PIT (Point in Time) restore ability</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="5-pipeline">5. Pipeline</h3>
+
+<ul class="task-list">
+  <li>5.1 Continuous Delivery pipeline configured to:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />5.1.1 Automatically test pull requests</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />5.1.2 <code class="highlighter-rouge">master</code> branch to run code checks
+        <ul class="task-list">
+          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />5.1.2.1 Code standard checks (linting)</li>
+          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />5.1.2.2 Tests</li>
+        </ul>
+      </li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />5.1.3 Automatic deploy to <code class="highlighter-rouge">staging</code> environment</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />5.1.4 Manual step to deploy to <code class="highlighter-rouge">production</code> environment</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />5.1.5 Zero downtime (e.g. blue/green environment) deployment step to <strong>all</strong> environments</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />5.2 All pipeline steps are defined in code within repository for chosen pipeline service</li>
+</ul>
+
+<h3 id="6-application-logging">6. Application logging</h3>
+
+<ul class="task-list">
+  <li>6.1 Remote logging service installed and configured as remote application logger for:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />6.1.1 Main application</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />6.1.2 Background workers</li>
+    </ul>
+  </li>
+  <li>6.2 Appropriate log level configured:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />6.2.1 <code class="highlighter-rouge">production</code> set to <code class="highlighter-rouge">INFO</code></li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />6.2.2 <code class="highlighter-rouge">staging</code> set to <code class="highlighter-rouge">DEBUG</code></li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />6.2.3 <code class="highlighter-rouge">testing</code> set to <code class="highlighter-rouge">DEBUG</code></li>
+    </ul>
+  </li>
+  <li>6.3 Tagged logging configured to include:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />6.3.1 (Sub)domain of request</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />6.3.2 Application environment (<code class="highlighter-rouge">production</code>, <code class="highlighter-rouge">staging</code> or <code class="highlighter-rouge">testing</code>)</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />6.3.3 UUID of request</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />6.3.4 Session ID</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />6.4 Ensure HTTP requests are condensed to a single line log output including:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />6.4.1 IP address of originating request</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />6.4.2 HTTP method</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />6.4.3 HTTP parameters</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />6.5 Ensure sensitive parameters are filtered from logs</li>
+</ul>
+
+<h3 id="7-exception-tracking">7. <a href="/context-and-compliance/07-exception-tracking.html">Exception tracking</a></h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />7.1 Remote exception tracking service installed and configured for exception capture for all non-development environments</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />7.2 Alerts sent to relevant instant chat channel</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />7.3 Alerts sent to relevant team email address</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />7.4 UUID of request is sent as additional user data</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />7.5 Reported exceptions are resolved within a week
+<em>Exceptions that have been thrown but not caught or handled safely could lead to larger problems for applications and teams. It’s good for teams to have the discipline of regularly checking, or acting upon reported exceptions as they occur during development to prevent these from accruing. If code changes have been made to handle these, the exceptions should be marked as resolved in the tracking service. No reported exceptions in the past week is a positive sign of well managed exceptions.</em></li>
+</ul>
+
+<h3 id="8-infrastructure-monitoring-and-scaling">8. Infrastructure monitoring and scaling</h3>
+
+<p>To be applied if infrastructure has been orchestrated and provisioned specifically for the project. Hosted PaaS solutions don’t require infrastructure related monitoring at present.</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />8.1 Sub-organisation created under parent organisation for each customer</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />8.2 Monitoring agent be installed on all production infrastructure</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />8.3 Monitoring agent could be installed on non-production infrastructure if necessary</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />8.4 Monitoring agent hostname configured according to proposed <a href="https://github.com/madetech/rfcs/pull/9" title="Proposed RFC 008 - Server naming convention">RFC 008 - Server naming convention</a> (<em>this does not apply to serverless</em>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />8.5 Infrastructure to implement auto-scaling for production</li>
+  <li class="task-list-item">8.6 Monitors configured in infrastructure monitoring service for (warn/alert):
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />8.6.1 Inode usage (80% / 90%)</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />8.6.2 CPU load (75% / 85% average over 2 minutes)</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />8.6.3 Disk usage (80% / 90%)</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />8.6.4 Memory usage (60% / 70% average over 2 minutes)</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />8.6.5 Host stopped reporting</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />8.6.6 NTP sync</li>
+    </ul>
+  </li>
+  <li class="task-list-item">8.7 Monitors configured to alert via:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />8.7.1 Slack channel</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />8.7.2 Team email address</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="9-application-performance-management">9. Application performance management</h3>
+
+<ul>
+  <li>9.1 APM service configured to monitor
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />9.1.1 App performance</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />9.1.2 Request time</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="10-vulnerability-alerts">10. Vulnerability alerts</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />10.1 Configure either VCS hosting service or Continuous Delivery pipeline to detect and alert on vulnerable dependencies</li>
+</ul>
+
+<h3 id="11-dependency-upgrade-alerts">11. Dependency upgrade alerts</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />11.1 Configure a dependency upgrade notification service to submit pull requests to VCS service repository with alerts</li>
+</ul>
+
+<h2 id="platform-specific">Platform specific</h2>
+
+<ul>
+  <li><a href="/reference/ruby.html">Ruby</a></li>
+</ul>
+
+<h2 id="suggested-services">Suggested services</h2>
+
+<ul>
+  <li>VCS hosting - Github</li>
+  <li>Central logging - Papertrail, CloudWatch</li>
+  <li>Exception tracking - Sentry</li>
+  <li>Infrastructure monitoring - Datadog, CloudWatch</li>
+  <li>Security vulnerability scanning - Github</li>
+  <li>Dependency upgrade notifications - Dependabot</li>
+</ul>
+
+
+    </div>
+    <div class="sales-banner">
+      <h4>How effective is your business at software delivery?</h4>
+      <p>
+        Answer these 20 questions and find out where the principal software delivery challenges lie within your organisation.
+      </p>
+      <a href="https://madetech.typeform.com/to/d2Emvz" class="cta-button">Get started now</a>
+    </div>
+  </div>
+</main>
+
+<div class="progress_bar">
+  <div class="holder">
+        <span>
+          <em id="slice_2"></em>
+        </span>
+    <span>
+          <em id="slice_1"></em>
+        </span>
+    <h5><span id="percentage_holder"></span><span>%</span></h5>
+  </div>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+<!-- <script src="/assets/js/madetech-frontend.js"></script> -->
+
+
+</body>
+</html>

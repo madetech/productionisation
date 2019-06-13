@@ -8,17 +8,17 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>The Made Tech Productionisation Checklist | productionisation</title>
+<title>Context &amp; compliance | productionisation</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="The Made Tech Productionisation Checklist" />
+<meta property="og:title" content="Context &amp; compliance" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The Made Tech Productionisation Checklist for Software Projects" />
 <meta property="og:description" content="The Made Tech Productionisation Checklist for Software Projects" />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
+<link rel="canonical" href="http://localhost:4000/context-and-compliance/" />
+<meta property="og:url" content="http://localhost:4000/context-and-compliance/" />
 <meta property="og:site_name" content="productionisation" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/","name":"productionisation","description":"The Made Tech Productionisation Checklist for Software Projects","@type":"WebSite","headline":"The Made Tech Productionisation Checklist","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/context-and-compliance/","description":"The Made Tech Productionisation Checklist for Software Projects","@type":"WebPage","headline":"Context &amp; compliance","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <link rel="stylesheet" href="/assets/css/style-csaba.css?v=11bf83016b60234d51461f48e1f35443a1fa6e8ca">
@@ -130,97 +130,15 @@
 <main>
   <div>
     <div>
-      <h1 id="the-made-tech-productionisation-checklist">The Made Tech Productionisation Checklist</h1>
+      <h1 id="context--compliance">Context &amp; compliance</h1>
 
-<p>The SRE team at Made Tech have created a checklist that they use to evaluate the new projects for their readiness to be productionised.</p>
+<p>Where the productionisation checklist serves as a overall health check for the applications we maintain, it doesn’t have the scope for providing context and justifications for the specific checklist items existing in the first place. These documents try to provide that information as well as providing the ways to make your application compliant for those items.</p>
 
-<p>We evaluate the projects in the following areas:</p>
+<p>The current set of recommendations are a consolidation of Made Tech learnings over the years, and a way of sharing knowledge amongst the company of how we can achieve these particular topics in a tried and tested manner.</p>
 
-<ul>
-  <li>Testability</li>
-  <li>Availability of different environments</li>
-  <li>Database durability</li>
-  <li>Continuous Delivery Pipeline</li>
-  <li>Logging</li>
-  <li>Infrastructure monitoring</li>
-  <li>Dependency upgrade and Vulnerability alerts</li>
-</ul>
+<p>We encourage teams to explore alternatives to these current suggestions, however, if a team deviates from these, then there is a need to have the same context and justifications given for why they haven’t been used. This is so that the SRE team can consider whether to adopt these new alternatives into this set of suggestions, or decide if by deviating, that there is a risk to the reliability and maintainability of an application as a result.</p>
 
-<p>In addition to these requirements, we also expect projects to use source control management, provide a mechanism to seed the local database environment and adhere to our standards (RFCS) for areas such as <code class="highlighter-rouge">Makefiles</code> and code editor defaults.</p>
-
-<p>The full checklist can be seen here: <a href="/PRODUCTIONISATION.html"><code class="highlighter-rouge">PRODUCTIONISATION.md</code></a>.</p>
-
-<h2 id="why-does-this-list-exists">Why does this list exists?</h2>
-
-<p>We believe that following this list will encourage teams to consistently follow best practices and improve their projects, which would lead to making a greater impact by delivering faster and learning more.</p>
-
-<h2 id="how-to-apply-this-to-your-project">How to apply this to your project</h2>
-<ol>
-  <li>Copy the checklist for your project - new tab in the <a href="https://docs.google.com/spreadsheets/d/1HRJ2SENxAnKmk66Xo6KIqRcJf6EHJqjAdpHJ3IouhyM/edit#gid=260137935">spreadsheet</a>.</li>
-  <li>Continuously update the checklist, at least once a month.</li>
-  <li>Provide feedback, addition and removal of points to the Chalet.</li>
-</ol>
-
-<h3 id="granularity">Granularity</h3>
-<p>Each project that has a unique set of staff/team members, instances and stack, should have its own checklist.</p>
-
-<h3 id="definition-of-done">Definition of Done</h3>
-<p>Once you’re comfortable that you have satisfied the criteria, tick the box. If you’re on the fence, don’t.</p>
-
-<h2 id="how-to-measure-success">How to measure success</h2>
-<p>We measure success by considering the following points:</p>
-
-<h3 id="improving-the-reliability-of-applications-for-users">Improving the reliability of applications for users</h3>
-
-<h4 id="outcomes">Outcomes</h4>
-<ul>
-  <li>All teams tracking positive progress on checklist</li>
-  <li>Low level of bugs being reported</li>
-  <li>Customers perceive our applications to be reliable</li>
-  <li>User perceive our applications to be reliable</li>
-</ul>
-
-<h4 id="when-will-we-review">When will we review</h4>
-<ul>
-  <li>Monthly p15n check-in during Learn Tech before quarterly update</li>
-</ul>
-
-<h4 id="what-do-we-want-to-see">What do we want to see</h4>
-<ul>
-  <li>See &gt;5% improvement per month per application</li>
-  <li>Positive feedback regarding low level of bugs when interviewing delivery managers</li>
-  <li>Positive review from customer from delivery managers</li>
-</ul>
-
-<h3 id="customers-are-aware-of-productionisation-best-practices-and-can-see-the-quality-we-bake-into-applications">Customers are aware of productionisation best practices and can see the quality we bake into applications</h3>
-
-<h4 id="outcomes-1">Outcomes</h4>
-<ul>
-  <li>Delivery managers are reporting on p15n checklist in their fortnightly reports</li>
-  <li>Product owner actively promoting the reliability of our applications and the quality we bake in</li>
-  <li>Customers can easily understand items in the p15n checklist</li>
-</ul>
-
-<h4 id="when-will-we-review-1">When will we review</h4>
-<ul>
-  <li>Monthly p15n check-in during Learn Tech before quarterly update</li>
-</ul>
-
-<h4 id="what-do-we-want-to-see-1">What do we want to see</h4>
-<ul>
-  <li>Every fortnightly report includes p15n checklist</li>
-  <li>Delivery manager able to point to the prioritisation of improving p15n checklist</li>
-  <li>Positive interview with customer regarding their understanding of p15n</li>
-</ul>
-
-<h2 id="license">License</h2>
-
-<p>Attribution-ShareAlike 4.0 International: The licensor permits others to copy, distribute, display, and perform the work. In return, licensees must give the original author credit. See <a href="/LICENSE.txt">`LICENSE.txt’</a>.</p>
-
-<h2 id="copyright">Copyright</h2>
-
-<p>Made Tech 2019 ©</p>
-
+<p>As the SRE is the defacto on-call team for these applications, it is important for the team to feel confident in the application and it’s current state so that it can be supported currently and in the future, otherwise the delivery team may need to be the 1st responders in an on-call period for that application.</p>
 
     </div>
     <div class="sales-banner">

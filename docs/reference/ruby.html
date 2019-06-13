@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico?v=">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Ruby/on Rails | productionisation</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Ruby/on Rails" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Made Tech Productionisation Checklist for Software Projects" />
+<meta property="og:description" content="The Made Tech Productionisation Checklist for Software Projects" />
+<link rel="canonical" href="http://localhost:4000/reference/ruby.html" />
+<meta property="og:url" content="http://localhost:4000/reference/ruby.html" />
+<meta property="og:site_name" content="productionisation" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/reference/ruby.html","description":"The Made Tech Productionisation Checklist for Software Projects","@type":"WebPage","headline":"Ruby/on Rails","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/assets/css/style-csaba.css?v=11bf83016b60234d51461f48e1f35443a1fa6e8ca">
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+  <script src="/assets/js/library.js"></script>
+</head>
+
+<body>
+
+<!--
+  TODO:
+  1. Seperate menu into markdown
+  2. Use transform rotate in calculate -> dinamically update progress bar
+  3. Mobile optimise menu
+  4. Final touches
+
+-->
+
+<input type="checkbox" id="side_bar_closer" />
+
+<div class=side_bar_background>
+</div>
+
+<div id="side_bar">
+  <label for="side_bar_closer"></label>
+
+  <div class="logo_holder">
+    <a href="/">
+    <span class="header_logo_type__text">p15n checklist</span>
+    <span class="px-3">by</span>
+    <img alt="Made Tech" itemProp="logo" src="/assets/images/made-tech-logo-white.png" width="120px" />
+    </a>
+  </div>
+
+  <div class="header_nav">
+    <nav class="navbar-nav align-items-center">
+      <ul>
+        <li>
+          <a>Project readiness checklist</a>
+          <ol>
+            <li>
+              <a href="#1-general-requirements">General requirements</a>
+            </li>
+            <li>
+              <a href="#2-testing">Testing</a>
+            </li>
+            <li>
+              <a href="#3-environments">Environments</a>
+            </li>
+            <li>
+              <a href="#4-database">Database</a>
+            </li>
+            <li>
+              <a href="#5-pipeline">Pipeline</a>
+            </li>
+            <li>
+              <a href="#6-application-logging">Application logging</a>
+            </li>
+            <li>
+              <a href="#7-exception-tracking">Exception tracking</a>
+            </li>
+            <li>
+              <a href="#8-infrastructure-monitoring--scaling">Infrastructure monitoring</a>
+            </li>
+            <li>
+              <a href="#9-application-performance-management">Application performance management</a>
+            </li>
+            <li>
+              <a href="#10-vulnerability-alerts">Vulnerability alerts</a>
+            </li>
+            <li>
+              <a href="#11-dependency-upgrade-alerts">Dependency upgrade alerts</a>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <a>Platform specific</a>
+        </li>
+        <li>
+          <a>Recommended services</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <nav class="footer">
+    <a href="https://www.madetech.com">Who are Made Tech?</a>
+    <a href="https://www.madetech.com/blog">Blog</a>
+    <a href="https://learn.madetech.com">Learn</a>
+    <a href="https://www.madetech.com/careers">Careers</a>
+
+    <div>
+      <a class="footer__social_link" href="https://www.madetech.com/ext/linkedin">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </a>
+
+      <a class="footer__social_link" href="https://www.madetech.com/ext/twitter">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+
+      <a class="footer__social_link" href="https://www.madetech.com/ext/github">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <div>
+    <div>
+      <h1 id="rubyon-rails">Ruby/on Rails</h1>
+
+<ul>
+  <li><a href="#rubyon-rails">Ruby/on Rails</a>
+    <ul>
+      <li><a href="#linting-violations">Linting violations</a></li>
+      <li><a href="#local-application-profiling">Local application profiling</a></li>
+      <li><a href="#application-logging">Application logging</a></li>
+      <li><a href="#exception-tracking">Exception tracking</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="linting-violations">Linting violations</h2>
+
+<p>When running <code class="highlighter-rouge">rubocop</code>, style related linting violations are those that are flagged when running against <code class="highlighter-rouge">Style</code>, <code class="highlighter-rouge">Layout</code> and <code class="highlighter-rouge">Lint</code> cop departments.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rubocop --only Style,Layout,Lint
+</code></pre></div></div>
+
+<p>Complexity related linting violations are those that are non-style related:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rubocop --except Style,Layout,Lint
+</code></pre></div></div>
+
+<h2 id="local-application-profiling">Local application profiling</h2>
+
+<p>Use <code class="highlighter-rouge">rack-mini-profiler</code> gem and ensure it’s only included in the <code class="highlighter-rouge">:development</code> bundler group for app.</p>
+
+<p>Example Rack profiler configuration (<code class="highlighter-rouge">config/initializers/rack_profiler.rb</code>):</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="no">Rails</span><span class="p">.</span><span class="nf">env</span><span class="p">.</span><span class="nf">development?</span>
+  <span class="nb">require</span> <span class="s2">"rack-mini-profiler"</span>
+
+  <span class="no">Rack</span><span class="o">::</span><span class="no">MiniProfilerRails</span><span class="p">.</span><span class="nf">initialize!</span><span class="p">(</span><span class="no">Rails</span><span class="p">.</span><span class="nf">application</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h2 id="application-logging">Application logging</h2>
+
+<ul>
+  <li>Use <code class="highlighter-rouge">remote_syslog_logger</code> gem for the main application logging to Papertrail.</li>
+  <li>If using infrastructure setup specifically for project, use a log file and <code class="highlighter-rouge">remote_syslog2</code> to capture, with:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />14 day retention</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Daily rotation</li>
+    </ul>
+  </li>
+  <li>Otherwise use PaaS integration with Papertrail to capture workers
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Background workers confirmed to be logging</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">lograge</code> gem installed and enabled for all non-development environments</li>
+</ul>
+
+<p>Main application example configuration (for example, within <code class="highlighter-rouge">config/environments/production.rb</code>):</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">config</span><span class="p">.</span><span class="nf">log_level</span> <span class="o">=</span> <span class="ss">:info</span>
+<span class="n">config</span><span class="p">.</span><span class="nf">logger</span> <span class="o">=</span> <span class="no">ActiveSupport</span><span class="o">::</span><span class="no">TaggedLogging</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="no">RemoteSyslogLogger</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'logs.papertrailapp.com'</span><span class="p">,</span> <span class="mi">12345</span><span class="p">,</span> <span class="ss">program: </span><span class="s2">"rails-</span><span class="si">#{</span><span class="no">Rails</span><span class="p">.</span><span class="nf">env</span><span class="si">}</span><span class="s2">"</span><span class="p">))</span>
+<span class="n">config</span><span class="p">.</span><span class="nf">log_tags</span> <span class="o">=</span> <span class="p">[</span><span class="ss">:env</span><span class="p">,</span> <span class="ss">:subdomain</span><span class="p">,</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">r</span><span class="o">|</span> <span class="n">r</span><span class="p">.</span><span class="nf">cookies</span><span class="p">[</span><span class="s1">'_tpms_session'</span><span class="p">]</span> <span class="p">},</span> <span class="ss">:uuid</span><span class="p">]</span>
+<span class="n">config</span><span class="p">.</span><span class="nf">log_formatter</span> <span class="o">=</span> <span class="o">::</span><span class="no">Logger</span><span class="o">::</span><span class="no">Formatter</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">config</span><span class="p">.</span><span class="nf">lograge</span><span class="p">.</span><span class="nf">enabled</span> <span class="o">=</span> <span class="kp">true</span>
+</code></pre></div></div>
+
+<p>Background worker example configuration (<code class="highlighter-rouge">config/initializers/delayed_job.rb</code>):</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Delayed</span><span class="o">::</span><span class="no">Worker</span><span class="p">.</span><span class="nf">logger</span> <span class="o">=</span> <span class="no">Logger</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="no">Rails</span><span class="p">.</span><span class="nf">root</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s1">'log'</span><span class="p">,</span> <span class="s2">"jobs-</span><span class="si">#{</span><span class="no">Rails</span><span class="p">.</span><span class="nf">env</span><span class="si">}</span><span class="s2">.log"</span><span class="p">),</span> <span class="mi">14</span><span class="p">,</span> <span class="s1">'daily'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="exception-tracking">Exception tracking</h2>
+
+<p>Use the <code class="highlighter-rouge">sentry-raven</code> gem.</p>
+
+<p>Additional data can be sent to Sentry when an exception is captured by using <code class="highlighter-rouge">Raven.user_context</code>. A simple integration with this is as following in <code class="highlighter-rouge">ApplicationController.rb</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ApplicationController</span> <span class="o">&lt;</span> <span class="no">ActionController</span><span class="o">::</span><span class="no">Base</span>
+  <span class="o">...</span>
+  <span class="n">before_action</span> <span class="ss">:set_raven_context</span>
+  <span class="o">...</span>
+
+  <span class="k">def</span> <span class="nf">set_raven_context</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">request_uuid: </span><span class="n">request</span><span class="p">.</span><span class="nf">uuid</span> <span class="p">}</span>
+
+    <span class="no">Raven</span><span class="p">.</span><span class="nf">user_context</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+    </div>
+    <div class="sales-banner">
+      <h4>How effective is your business at software delivery?</h4>
+      <p>
+        Answer these 20 questions and find out where the principal software delivery challenges lie within your organisation.
+      </p>
+      <a href="https://madetech.typeform.com/to/d2Emvz" class="cta-button">Get started now</a>
+    </div>
+  </div>
+</main>
+
+<div class="progress_bar">
+  <div class="holder">
+        <span>
+          <em id="slice_2"></em>
+        </span>
+    <span>
+          <em id="slice_1"></em>
+        </span>
+    <h5><span id="percentage_holder"></span><span>%</span></h5>
+  </div>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+<!-- <script src="/assets/js/madetech-frontend.js"></script> -->
+
+
+</body>
+</html>

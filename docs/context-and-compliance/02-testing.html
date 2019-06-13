@@ -8,17 +8,17 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>The Made Tech Productionisation Checklist | productionisation</title>
+<title>2 - Testing | productionisation</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="The Made Tech Productionisation Checklist" />
+<meta property="og:title" content="2 - Testing" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The Made Tech Productionisation Checklist for Software Projects" />
 <meta property="og:description" content="The Made Tech Productionisation Checklist for Software Projects" />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
+<link rel="canonical" href="http://localhost:4000/context-and-compliance/02-testing.html" />
+<meta property="og:url" content="http://localhost:4000/context-and-compliance/02-testing.html" />
 <meta property="og:site_name" content="productionisation" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/","name":"productionisation","description":"The Made Tech Productionisation Checklist for Software Projects","@type":"WebSite","headline":"The Made Tech Productionisation Checklist","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/context-and-compliance/02-testing.html","description":"The Made Tech Productionisation Checklist for Software Projects","@type":"WebPage","headline":"2 - Testing","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <link rel="stylesheet" href="/assets/css/style-csaba.css?v=11bf83016b60234d51461f48e1f35443a1fa6e8ca">
@@ -130,97 +130,43 @@
 <main>
   <div>
     <div>
-      <h1 id="the-made-tech-productionisation-checklist">The Made Tech Productionisation Checklist</h1>
+      <h1 id="2---testing">2 - Testing</h1>
 
-<p>The SRE team at Made Tech have created a checklist that they use to evaluate the new projects for their readiness to be productionised.</p>
+<h2 id="21-test-code-coverage-of-90-minimum">2.1 Test code coverage of 90% minimum</h2>
 
-<p>We evaluate the projects in the following areas:</p>
+<h4 id="context--justification">Context &amp; justification</h4>
 
-<ul>
-  <li>Testability</li>
-  <li>Availability of different environments</li>
-  <li>Database durability</li>
-  <li>Continuous Delivery Pipeline</li>
-  <li>Logging</li>
-  <li>Infrastructure monitoring</li>
-  <li>Dependency upgrade and Vulnerability alerts</li>
+<p>Ensuring <strong>Test Driven Development (TDD)</strong> is widely practiced across Made Tech, tests should be written for <em>every</em> piece of code. Test code coverage of 90% minimum <strong>should</strong> indicate that 10% of code is not covered by tests. In some cases, tests cannot be written for every piece of code. To accommodate legacy projects where the structure of the project prevents full test code coverage, 90% is chosen as the minimum. However, all project teams, especially greenfield projects, should aim to write tests for 100% of their code.</p>
+
+<h4 id="compliance">Compliance</h4>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test code coverage of 90% minimum</li>
 </ul>
 
-<p>In addition to these requirements, we also expect projects to use source control management, provide a mechanism to seed the local database environment and adhere to our standards (RFCS) for areas such as <code class="highlighter-rouge">Makefiles</code> and code editor defaults.</p>
+<h2 id="22-unit-tests-that-run-in-under-30-seconds">2.2 Unit tests that run in under 30 seconds</h2>
 
-<p>The full checklist can be seen here: <a href="/PRODUCTIONISATION.html"><code class="highlighter-rouge">PRODUCTIONISATION.md</code></a>.</p>
+<h4 id="context--justification-1">Context &amp; justification</h4>
 
-<h2 id="why-does-this-list-exists">Why does this list exists?</h2>
+<p>Each feature should be tested in isolation hence unit testing. Unit tests are necessary in order to ensure the code written  is correct. These tests should typically run in under 30 seconds unless there is good reasoning behind why this cannot be achieved. The main aim of this is to accommodate quick feedback loops.</p>
 
-<p>We believe that following this list will encourage teams to consistently follow best practices and improve their projects, which would lead to making a greater impact by delivering faster and learning more.</p>
+<h4 id="compliance-1">Compliance</h4>
 
-<h2 id="how-to-apply-this-to-your-project">How to apply this to your project</h2>
-<ol>
-  <li>Copy the checklist for your project - new tab in the <a href="https://docs.google.com/spreadsheets/d/1HRJ2SENxAnKmk66Xo6KIqRcJf6EHJqjAdpHJ3IouhyM/edit#gid=260137935">spreadsheet</a>.</li>
-  <li>Continuously update the checklist, at least once a month.</li>
-  <li>Provide feedback, addition and removal of points to the Chalet.</li>
-</ol>
-
-<h3 id="granularity">Granularity</h3>
-<p>Each project that has a unique set of staff/team members, instances and stack, should have its own checklist.</p>
-
-<h3 id="definition-of-done">Definition of Done</h3>
-<p>Once you’re comfortable that you have satisfied the criteria, tick the box. If you’re on the fence, don’t.</p>
-
-<h2 id="how-to-measure-success">How to measure success</h2>
-<p>We measure success by considering the following points:</p>
-
-<h3 id="improving-the-reliability-of-applications-for-users">Improving the reliability of applications for users</h3>
-
-<h4 id="outcomes">Outcomes</h4>
-<ul>
-  <li>All teams tracking positive progress on checklist</li>
-  <li>Low level of bugs being reported</li>
-  <li>Customers perceive our applications to be reliable</li>
-  <li>User perceive our applications to be reliable</li>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Unit tests that run in under 30 seconds</li>
 </ul>
 
-<h4 id="when-will-we-review">When will we review</h4>
-<ul>
-  <li>Monthly p15n check-in during Learn Tech before quarterly update</li>
+<h2 id="23-end-to-end-tests-that-run-in-under-5-minutes">2.3 End-to-end tests that run in under 5 minutes</h2>
+
+<h4 id="context--justification-2">Context &amp; justification</h4>
+
+<p>End-to-end (E2E) tests, as part of <strong>Acceptance Test Driven Development (ATDD)</strong>, are also necessary in order to ensure the code written does what it is supposed to do. As the name suggests, end-to-end tests collobarate with the user, developer/engineer and tester. The purpose of these tests is to evaluate the compliance of the code with the business requirements. Hence, these tests should optimally run in under 5 minutes.</p>
+
+<h4 id="compliance-2">Compliance</h4>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />End-to-end tests that run in under 5 minutes</li>
 </ul>
-
-<h4 id="what-do-we-want-to-see">What do we want to see</h4>
-<ul>
-  <li>See &gt;5% improvement per month per application</li>
-  <li>Positive feedback regarding low level of bugs when interviewing delivery managers</li>
-  <li>Positive review from customer from delivery managers</li>
-</ul>
-
-<h3 id="customers-are-aware-of-productionisation-best-practices-and-can-see-the-quality-we-bake-into-applications">Customers are aware of productionisation best practices and can see the quality we bake into applications</h3>
-
-<h4 id="outcomes-1">Outcomes</h4>
-<ul>
-  <li>Delivery managers are reporting on p15n checklist in their fortnightly reports</li>
-  <li>Product owner actively promoting the reliability of our applications and the quality we bake in</li>
-  <li>Customers can easily understand items in the p15n checklist</li>
-</ul>
-
-<h4 id="when-will-we-review-1">When will we review</h4>
-<ul>
-  <li>Monthly p15n check-in during Learn Tech before quarterly update</li>
-</ul>
-
-<h4 id="what-do-we-want-to-see-1">What do we want to see</h4>
-<ul>
-  <li>Every fortnightly report includes p15n checklist</li>
-  <li>Delivery manager able to point to the prioritisation of improving p15n checklist</li>
-  <li>Positive interview with customer regarding their understanding of p15n</li>
-</ul>
-
-<h2 id="license">License</h2>
-
-<p>Attribution-ShareAlike 4.0 International: The licensor permits others to copy, distribute, display, and perform the work. In return, licensees must give the original author credit. See <a href="/LICENSE.txt">`LICENSE.txt’</a>.</p>
-
-<h2 id="copyright">Copyright</h2>
-
-<p>Made Tech 2019 ©</p>
-
 
     </div>
     <div class="sales-banner">

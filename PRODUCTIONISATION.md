@@ -10,7 +10,6 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 * [RFC 013 - Code repository standards][rfc_013]
 
 ### 1. [General requirements](context-and-compliance/01-general.md)
-
 * [ ] 1.1 Application source code hosted with a Git VCS service
 * 1.2 Adhere to project coding standards
   * [ ] 1.2.1 Provides a style guideline
@@ -90,7 +89,7 @@ Ensuring that your project adheres to the following RFCs is a good first step as
 * [ ] 7.5 Reported exceptions are resolved within a week
   _Exceptions that have been thrown but not caught or handled safely could lead to larger problems for applications and teams. It's good for teams to have the discipline of regularly checking, or acting upon reported exceptions as they occur during development to prevent these from accruing. If code changes have been made to handle these, the exceptions should be marked as resolved in the tracking service. No reported exceptions in the past week is a positive sign of well managed exceptions._
 
-### 8. Infrastructure monitoring + scaling
+### 8. Infrastructure monitoring and scaling
 
 To be applied if infrastructure has been orchestrated and provisioned specifically for the project. Hosted PaaS solutions don't require infrastructure related monitoring at present.
 
@@ -110,7 +109,7 @@ To be applied if infrastructure has been orchestrated and provisioned specifical
   * [ ] 8.7.1 Slack channel
   * [ ] 8.7.2 Team email address
 
-### 9. Application performance management (APM)
+### 9. Application performance management
 
 * 9.1 APM service configured to monitor
   * [ ] 9.1.1 App performance
